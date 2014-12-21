@@ -1,0 +1,32 @@
+# Blocks
+tile.bramcraft:crystal_ore.name=Crystal Ore
+tile.bramcraft:boom.name=Boom Block
+tile.bramcraft:dark_block.name=Dark Block
+tile.bramcraft:dark_ore.name=Dark Ore
+tile.bramcraft:dark_rock.name=Dark Rock
+
+# Items
+item.bramcraft:bacon.name=Bacon
+item.bramcraft:crossbow.name=Crossbow
+item.bramcraft:crystal_gem.name=Crystal Gem
+item.bramcraft:crystal_pickaxe.name=Crystal Pickaxe
+item.bramcraft:dark_axe.name=Dark Axe
+item.bramcraft:dark_iron.name=Dark Iron Ingot
+item.bramcraft:dark_pickaxe.name=Dark Pickaxe
+item.bramcraft:dark_shovel.name=Dark Shovel
+item.bramcraft:dark_sword.name=Dark Sword
+item.bramcraft:face.name=Face
+item.bramcraft:frame.name=Frame
+item.bramcraft:infused_diamond.name=Infused Diamond
+item.bramcraft:infused_ender.name=Infused Ender
+item.bramcraft:infused_iron.name=Infused Iron
+item.bramcraft:jetpack.name=Jetpack
+item.bramcraft:mobile_enderchest.name=Mobile Enderchest
+item.bramcraft:network_checker.name=Network Checker
+item.bramcraft:op_pickaxe.name=OP Pickaxe
+item.bramcraft:poison_apple.name=Poison Apple
+item.bramcraft:swine_meat.name=Swine Meat
+item.bramcraft:thruster.name=Thruster
+
+# Creative Tab
+itemGroup.bramcraft=BramCraft Mod
