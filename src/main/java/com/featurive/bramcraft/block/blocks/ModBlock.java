@@ -1,4 +1,4 @@
-package com.featurive.bramcraft.block;
+package com.featurive.bramcraft.block.blocks;
 
 import com.featurive.bramcraft.creativetab.CreativeTab;
 import com.featurive.bramcraft.reference.Messages;

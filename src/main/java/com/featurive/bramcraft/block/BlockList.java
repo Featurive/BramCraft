@@ -1,12 +1,13 @@
 package com.featurive.bramcraft.block;
 
-import com.featurive.bramcraft.reference.Names;
+import com.featurive.bramcraft.block.blocks.ModBlock;
 
-public class BlockList extends ModBlock {
-    public static ModBlock crystal_ore = (ModBlock) new ModBlock().setUnlocalizedName(Names.Block.crystal_ore);
-    public static BlockOpaque boom = (BlockOpaque) new BlockOpaque().setUnlocalizedName(Names.Block.boom);
-    public static ModBlock dark_block = (ModBlock) new ModBlock().setUnlocalizedName(Names.Block.dark_block);
-    public static ModBlock dark_ore = (ModBlock) new ModBlock().setUnlocalizedName(Names.Block.dark_ore);
-    public static ModBlock dark_rock = (ModBlock) new ModBlock().setUnlocalizedName(Names.Block.dark_rock);
-    public static BlockOpaque ship = (BlockOpaque) new BlockOpaque().setUnlocalizedName(Names.Block.ship);
+public final class BlockList extends ModBlock {
+    public static BlockCrystalOre crystal_ore = new BlockCrystalOre();
+    public static BlockBoom boom = new BlockBoom();
+    public static BlockDarkBlock dark_block = new BlockDarkBlock();
+    public static ModBlock dark_ore = new ModBlock();
+    public static ModBlock dark_rock = new ModBlock();
+    public static BlockDeveloper developer = new BlockDeveloper();
+    public static ModBlock dutch_flag = new BlockDutchFlag();
 }

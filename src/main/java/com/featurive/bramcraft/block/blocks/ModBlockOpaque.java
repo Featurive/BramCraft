@@ -1,10 +1,10 @@
-package com.featurive.bramcraft.block;
+package com.featurive.bramcraft.block.blocks;
 
-import net.minecraft.block.Block;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockOpaque extends ModBlock {
+public class ModBlockOpaque extends ModBlock {
     @Override
     public boolean isFullBlock() {
         return false;
@@ -36,20 +36,12 @@ public class BlockOpaque extends ModBlock {
     }
 
     @Override
-    public Block setLightLevel(float value) {
-        return super.setLightLevel(4F);
-    }
-
-    public void setBlockBoundsBasedOnState(IBlockAccess access, BlockPos pos) {
-        this.setBlockBounds(0.0F, 0.3125F, 0.0F, 1.0F, 0.5F, 1.0F);
-    }
-
-    public void setBlockBoundsForItemRender() {
-        this.setBlockBounds(0.0F, 0.3125F, 0.0F, 1.0F, 0.5F, 1.0F);
+    public boolean isSolidFullCube() {
+        return false;
     }
 
     @Override
-    public boolean isSolidFullCube() {
+    public boolean isBlockSolid(IBlockAccess worldIn, BlockPos pos, EnumFacing side) {
         return false;
     }
 }

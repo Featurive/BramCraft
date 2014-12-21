@@ -1,0 +1,195 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "arms": "bramcraft:blocks/agjm1_arms",
+        "body_back": "bramcraft:blocks/agjm1_body_back",
+        "body_front": "bramcraft:blocks/agjm1_body_front",
+        "hat_front": "bramcraft:blocks/agjm1_hat_front",
+        "hat_left": "bramcraft:blocks/agjm1_hat_left",
+        "hat_right": "bramcraft:blocks/agjm1_hat_right",
+        "head_back": "bramcraft:blocks/agjm1_head_back",
+        "head_front": "bramcraft:blocks/agjm1_head_front",
+        "head_right": "bramcraft:blocks/agjm1_head_right",
+        "head_left": "bramcraft:blocks/agjm1_head_left",
+        "head_top": "bramcraft:blocks/agjm1_head_top",
+        "head_bottom": "bramcraft:blocks/agjm1_head_bottom",
+        "legs": "bramcraft:blocks/agjm1_legs"
+    },
+    "elements": [
+        {
+            "from": [8,0,6],
+            "to": [12,12,10],
+            "faces": {
+                "up": {
+                    "uv": [4,0,8,4],
+                    "texture": "#legs"
+                },
+                "down": {
+                    "uv": [8,0,12,4],
+                    "texture": "#legs"
+                },
+                "west": {
+                    "texture": "missingtexture"
+                },
+                "east": {
+                    "uv": [12,4,8,16],
+                    "texture": "#legs"
+                },
+                "north": {
+                    "uv": [4,4,8,16],
+                    "texture": "#legs"
+                },
+                "south": {
+                    "uv": [12,4,16,16],
+                    "texture": "#legs"
+                }
+            }
+        },
+        {
+            "from": [4,0,6],
+            "to": [8,12,10],
+            "faces": {
+                "up": {
+                    "uv": [4,0,8,4],
+                    "texture": "#legs"
+                },
+                "down": {
+                    "uv": [8,0,12,4],
+                    "texture": "#legs"
+                },
+                "west": {
+                    "uv": [8,4,12,16],
+                    "texture": "#legs"
+                },
+                "east": {
+                    "texture": "missingtexture"
+                },
+                "north": {
+                    "uv": [8,4,4,16],
+                    "texture": "#legs"
+                },
+                "south": {
+                    "uv": [16,4,12,16],
+                    "texture": "#legs"
+                }
+            }
+        },
+        {
+            "from": [4,12,6],
+            "to": [12,24,10],
+            "faces": {
+                "up": {
+                    "uv": [4,0,12,4],
+                    "texture": "#body_back"
+                },
+                "west": {
+                    "uv": [12,4,16,16],
+                    "texture": "#body_front"
+                },
+                "east": {
+                    "uv": [0,4,4,16],
+                    "texture": "#body_front"
+                },
+                "north": {
+                    "uv": [4,4,12,16],
+                    "texture": "#body_front"
+                },
+                "south": {
+                    "uv": [4,4,12,16],
+                    "texture": "#body_back"
+                }
+            }
+        },
+        {
+            "from": [12,12,6],
+            "to": [16,24,10],
+            "faces": {
+                "up": {
+                    "uv": [4,0,8,4],
+                    "texture": "#arms"
+                },
+                "down": {
+                    "uv": [8,0,12,4],
+                    "texture": "#arms"
+                },
+                "west": {
+                    "uv": [8,4,12,16],
+                    "texture": "#arms"
+                },
+                "east": {
+                    "uv": [0,4,4,16],
+                    "texture": "#arms"
+                },
+                "north": {
+                    "uv": [4,4,8,16],
+                    "texture": "#arms"
+                },
+                "south": {
+                    "uv": [12,4,16,16],
+                    "texture": "#arms"
+                }
+            }
+        },
+        {
+            "from": [0,12,6],
+            "to": [4,24,10],
+            "faces": {
+                "up": {
+                    "uv": [4,0,8,4],
+                    "texture": "#arms"
+                },
+                "down": {
+                    "uv": [8,0,12,4],
+                    "texture": "#arms"
+                },
+                "west": {
+                    "uv": [8,4,12,16],
+                    "texture": "#arms"
+                },
+                "east": {
+                    "uv": [0,4,4,16],
+                    "texture": "#arms"
+                },
+                "north": {
+                    "uv": [4,4,8,16],
+                    "texture": "#arms"
+                },
+                "south": {
+                    "uv": [16,4,12,16],
+                    "texture": "#arms"
+                }
+            }
+        },
+        {
+            "from": [4,24,4],
+            "to": [12,32,12],
+            "faces": {
+                "up": {
+                    "uv": [0,0,16,16],
+                    "texture": "#head_top"
+                },
+                "down": {
+                    "uv": [0,0,16,16],
+                    "texture": "#head_bottom"
+                },
+                "west": {
+                    "uv": [0,0,16,16],
+                    "texture": "#head_left"
+                },
+                "east": {
+                    "uv": [0,0,16,16],
+                    "texture": "#head_right"
+                },
+                "north": {
+                    "uv": [0,0,16,16],
+                    "texture": "#head_front"
+                },
+                "south": {
+                    "uv": [0,0,16,16],
+                    "texture": "#head_back"
+                }
+            }
+        }
+    ]
+}
