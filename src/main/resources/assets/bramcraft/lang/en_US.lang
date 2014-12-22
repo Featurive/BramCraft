@@ -1,9 +1,9 @@
 # Blocks
 tile.bramcraft:crystal_ore.name=Crystal Ore
-tile.bramcraft:boom.name=Boom Block
 tile.bramcraft:dark_block.name=Dark Block
 tile.bramcraft:dark_ore.name=Dark Ore
 tile.bramcraft:dark_rock.name=Dark Rock
+tile.bramcraft:dutch_flag.name=Dutch Flag
 
 # Items
 item.bramcraft:bacon.name=Bacon
@@ -30,3 +30,17 @@ item.bramcraft:thruster.name=Thruster
 
 # Creative Tab
 itemGroup.bramcraft=BramCraft Mod
+
+# Achievements
+achievement.mineCrystalOre=Active Miner!
+achievement.mineCrystalOre.desc=Acquired by mining Crystal Ore.
+achievement.smeltDarkIron=Dark Smelter..
+achievement.smeltDarkIron.desc=Smelt Dark Ore into an ingot.
+achievement.buildCrystalPickaxe=Upgrading?!
+achievement.buildCrystalPickaxe.desc=Craft a Crystal Pickaxe.
+achievement.buildInfusedIron=On period?
+achievement.buildInfusedIron.desc=Craft an Infused Iron Ingot.
+achievement.openMobileEnderChest=From a distance..
+achievement.openMobileEnderChest.desc=Right Click a Mobile Enderchest.
+achievement.buildFace=Knowing
+achievement.buildFace.desc=Sorry, you still don't know me.

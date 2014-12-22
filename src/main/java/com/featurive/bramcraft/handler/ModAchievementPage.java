@@ -4,7 +4,7 @@ import com.featurive.bramcraft.reference.Achievements;
 import com.featurive.bramcraft.reference.References;
 import net.minecraftforge.common.AchievementPage;
 
-public class AchievementHandler {
+public class ModAchievementPage {
     public static void init(){
         AchievementPage pageBramCraft = new AchievementPage(References.MOD_NAME,
                 Achievements.mineCrystalOre,
