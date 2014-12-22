@@ -2,10 +2,11 @@ package com.featurive.bramcraft.init;
 
 import com.featurive.bramcraft.block.BlockList;
 import com.featurive.bramcraft.item.ItemList;
+import com.featurive.bramcraft.utility.LogHelper;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModRecipes {
     public static void registerRecipes()
@@ -42,5 +43,7 @@ public class ModRecipes {
         // Smelting
         GameRegistry.addSmelting(BlockList.dark_ore, new ItemStack(ItemList.dark_iron), 0.7f);
         GameRegistry.addSmelting(ItemList.swine_meat, new ItemStack(ItemList.bacon), 1f);
+
+        LogHelper.info("Registered recipes");
     }
 }

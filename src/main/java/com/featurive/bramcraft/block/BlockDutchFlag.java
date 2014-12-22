@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 
 public class BlockDutchFlag extends ModBlock {
     public BlockDutchFlag() {
-        setBlockName(Names.Block.dutch_flag);
+        this.setBlockName(Names.Block.dutch_flag);
     }
 
     @Override

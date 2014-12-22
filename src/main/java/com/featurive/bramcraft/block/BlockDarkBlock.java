@@ -5,6 +5,6 @@ import com.featurive.bramcraft.reference.Names;
 
 public class BlockDarkBlock extends ModBlock {
     public BlockDarkBlock(){
-        setUnlocalizedName(Names.Block.dark_block);
+        this.setBlockName(Names.Block.dark_block);
     }
 }
