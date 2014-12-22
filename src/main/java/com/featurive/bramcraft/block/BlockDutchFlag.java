@@ -12,8 +12,10 @@ public class BlockDutchFlag extends ModBlock {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-        if(world.isAirBlock(x,y+1,z)){
-            world.setBlock(x, y+1, z, BlockList.dutch_flag);
+        for (int i = 0; i < 10; i++) {
+            if (world.isAirBlock(x, y+i, z)) {
+                world.setBlock(x, y + i, z, BlockList.dutch_flag);
+            }
         }
         return true;
     }
