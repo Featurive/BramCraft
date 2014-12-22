@@ -29,9 +29,9 @@ public class WorldGenerator implements IWorldGenerator {
 
         for (int cx = 0; cx < 4; cx++){
             for (int cy = 0; cy < 3; cy++){
-                for (int slab = 0; slab < 4; slab++){
-                    world.setBlock(x+1+cx, y + 7 + cy, z, BlockList.dutch_flag);
-                    world.setBlock(x+1+cx, y + 7 + cy, z, Blocks.wooden_slab);
+                for (int slab = 0; slab < 5; slab++){
+                    world.setBlock(x+1+cx, y + 7 + cy, z, BlockList.dutch_flag, 0, 2);
+                    world.setBlock(x+slab, y + 10, z, Blocks.wooden_slab, 0, 2);
                 }
             }
         }
