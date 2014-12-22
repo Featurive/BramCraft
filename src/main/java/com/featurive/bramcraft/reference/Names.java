@@ -2,7 +2,6 @@ package com.featurive.bramcraft.reference;
 
 public class Names {
     public static class Item {
-
         public static String bacon = "bacon";
         public static String cheese = "cheese";
         public static String chocolatebar = "chocolatebar";
@@ -40,7 +39,8 @@ public class Names {
         public static String dark_ore = "dark_ore";
         public static String dark_rock = "dark_rock";
         public static String boom = "boom";
-        public static String ship = "ship";
+        public static String developer = "developer";
+        public static String dutch_flag = "dutch_flag";
     }
 
     public static class ConfigEntry {

@@ -1,18 +1,12 @@
 package com.featurive.bramcraft.item;
 
 import com.featurive.bramcraft.creativetab.CreativeTab;
-import com.featurive.bramcraft.reference.Messages;
-import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.reference.References;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.world.World;
-
-import java.util.List;
 
 public class ModShovel extends ItemSpade {
     public ModShovel(ToolMaterial material) {
@@ -32,7 +26,14 @@ public class ModShovel extends ItemSpade {
         return String.format("item.%s%s", References.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
-    public String getUnwrappedUnlocalizedName(String unlocalizedName)
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister iconRegister)
+    {
+        itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+    }
+
+    protected String getUnwrappedUnlocalizedName(String unlocalizedName)
     {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
