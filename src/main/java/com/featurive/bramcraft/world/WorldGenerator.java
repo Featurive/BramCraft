@@ -2,13 +2,20 @@ package com.featurive.bramcraft.world;
 
 import com.featurive.bramcraft.block.BlockList;
 import cpw.mods.fml.common.IWorldGenerator;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenMinable;
 
 import java.util.Random;
 
 public class WorldGenerator implements IWorldGenerator {
+
+    private WorldGenMinable dark_ore = new WorldGenMinable(BlockList.dark_ore, 12);
+    private WorldGenMinable crystal_ore = new WorldGenMinable(BlockList.crystal_ore, 8);
+
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
         int x = chunkX * 16;
@@ -30,18 +37,38 @@ public class WorldGenerator implements IWorldGenerator {
     }
 
 
-    private void generateSurface(World world, int x, int z, Random random){
-        if (random.nextInt(10) == 0) {
-            int randX = x * 16 + random.nextInt(16);
-            int randZ = z * 16 + random.nextInt(16);
-            int y = world.getHeightValue(randX, randZ);
+    public void generateSurface(World world, int x, int z, Random random){
+        if (random.nextInt(16) == 0) {
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = world.getHeightValue(randX, randZ);
 
-            generateFlag(world, x, y, z);
+            BiomeGenBase biome = world.getBiomeGenForCoords(randX, randZ);
+            if(biome != BiomeGenBase.river && biome != BiomeGenBase.ocean){
+                Block block = world.getBlock(randX, randY-1, randZ);
+                if(block != Blocks.water && block != Blocks.lava){
+                    generateFlag(world, randX, randY, randZ);
+                }
+            }
+        }
+
+        for(int i = 0; i < 5; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = 20 + random.nextInt(40);
+            dark_ore.generate(world, random, randX, randY, randZ);
+        }
+
+        for(int i = 0; i < 20; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = 2 + random.nextInt(16);
+            crystal_ore.generate(world, random, randX, randY, randZ);
         }
     }
 
     private void generateNether(World world, int x, int z, Random random) {
-
+        crystal_ore.generate(world, random, x, random.nextInt(100), z);
     }
 
     private void generateEnd(World world, int x, int z, Random random) {
