@@ -11,7 +11,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(References.MOD_ID)
 public class ModBlocks
 {
-    public static void registerBlocks()
+    public static void init()
     {
         // registerBlock(blockname, unlocalizedname);
         ModRegistry.register(BlockList.crystal_ore, Names.Block.crystal_ore);

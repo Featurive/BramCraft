@@ -10,7 +10,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(References.MOD_ID)
 public class ModItems
 {
-    public static void registerItems()
+    public static void init()
     {
         ModRegistry.register(ItemList.bacon, Names.Item.bacon);
         ModRegistry.register(ItemList.crossbow, Names.Item.crossbow);

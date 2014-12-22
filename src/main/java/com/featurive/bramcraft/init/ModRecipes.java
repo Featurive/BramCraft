@@ -9,7 +9,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class ModRecipes {
-    public static void registerRecipes()
+    public static void init()
     {
         // GameRegistry.addRecipe(new ItemStack(), "", "", "", '', new ItemStack());
 
