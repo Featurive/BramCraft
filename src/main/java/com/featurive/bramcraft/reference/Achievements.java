@@ -14,7 +14,7 @@ public class Achievements {
             // Icon
             new ItemStack(BlockList.crystal_ore),
             // Dependency
-            (Achievement)null).initIndependentStat().registerStat();
+            null).initIndependentStat().registerStat();
     public static Achievement smeltDarkIron = (Achievement) new Achievement("smeltDarkIron",
             // Name
             "smeltDarkIron",
@@ -50,7 +50,7 @@ public class Achievements {
             // Icon
             new ItemStack(ItemList.mobile_enderchest),
             // Dependency
-            (Achievement)null).initIndependentStat().registerStat();
+            null).initIndependentStat().registerStat();
     public static Achievement buildFace = (Achievement) new Achievement("buildFace",
             // Name
             "buildFace",
