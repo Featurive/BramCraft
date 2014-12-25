@@ -19,6 +19,8 @@ public class ModBlocks
         ModRegistry.register(BlockList.dark_ore, Names.Block.dark_ore);
         ModRegistry.register(BlockList.dark_rock, Names.Block.dark_rock);
         ModRegistry.register(BlockList.dutch_flag, Names.Block.dutch_flag);
+        ModRegistry.register(BlockList.ferrum_block, Names.Block.ferrum_block);
+        ModRegistry.register(BlockList.ferrum_ore, Names.Block.ferrum_ore);
 
         LogHelper.info("Registered blocks");
     }

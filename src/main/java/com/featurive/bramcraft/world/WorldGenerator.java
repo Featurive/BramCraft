@@ -15,6 +15,7 @@ public class WorldGenerator implements IWorldGenerator {
 
     private WorldGenMinable dark_ore = new WorldGenMinable(BlockList.dark_ore, 12);
     private WorldGenMinable crystal_ore = new WorldGenMinable(BlockList.crystal_ore, 8);
+    private WorldGenMinable ferrum_ore = new WorldGenMinable(BlockList.ferrum_ore, 12);
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
@@ -55,20 +56,32 @@ public class WorldGenerator implements IWorldGenerator {
         for(int i = 0; i < 5; i++){
             int randX = x + random.nextInt(16);
             int randZ = z + random.nextInt(16);
-            int randY = 20 + random.nextInt(40);
+            int randY = 24 + random.nextInt(40);
             dark_ore.generate(world, random, randX, randY, randZ);
         }
 
-        for(int i = 0; i < 20; i++){
+        for(int i = 0; i < 4; i++){
             int randX = x + random.nextInt(16);
             int randZ = z + random.nextInt(16);
-            int randY = 2 + random.nextInt(16);
+            int randY = random.nextInt(24);
             crystal_ore.generate(world, random, randX, randY, randZ);
+        }
+
+        for(int i = 0; i < 5; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = 24 + random.nextInt(48);
+            ferrum_ore.generate(world, random, randX, randY, randZ);
         }
     }
 
     private void generateNether(World world, int x, int z, Random random) {
-        crystal_ore.generate(world, random, x, random.nextInt(100), z);
+        for(int i = 0; i < 5; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = random.nextInt(128);
+            ferrum_ore.generate(world, random, randX, randY, randZ);
+        }
     }
 
     private void generateEnd(World world, int x, int z, Random random) {

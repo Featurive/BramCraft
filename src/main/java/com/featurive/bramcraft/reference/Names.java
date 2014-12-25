@@ -41,6 +41,8 @@ public class Names {
         public static String boom = "boom";
         public static String developer = "developer";
         public static String dutch_flag = "dutch_flag";
+        public static String ferrum_block = "ferrum_block";
+        public static String ferrum_ore = "ferrum_ore";
     }
 
     public static class ConfigEntry {
