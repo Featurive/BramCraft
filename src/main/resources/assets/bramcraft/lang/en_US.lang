@@ -4,6 +4,8 @@ tile.bramcraft:dark_block.name=Dark Block
 tile.bramcraft:dark_ore.name=Dark Ore
 tile.bramcraft:dark_rock.name=Dark Rock
 tile.bramcraft:dutch_flag.name=Dutch Flag
+tile.bramcraft:ferrum_block.name=Ferrum Block
+tile.bramcraft:ferrum_ore.name=Ferrum Ore
 
 # Items
 item.bramcraft:bacon.name=Bacon
