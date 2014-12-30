@@ -32,6 +32,8 @@ public class WorldGenerator implements IWorldGenerator {
             case 1:
                 generateEnd(world, x, z, random);
                 break;
+            case 20:
+                break;
             default:
                 generateSurface(world, x, z, random);
         }
@@ -75,16 +77,16 @@ public class WorldGenerator implements IWorldGenerator {
         }
     }
 
-    private void generateNether(World world, int x, int z, Random random) {
-        for(int i = 0; i < 5; i++){
-            int randX = x + random.nextInt(16);
-            int randZ = z + random.nextInt(16);
-            int randY = random.nextInt(128);
-            ferrum_ore.generate(world, random, randX, randY, randZ);
-        }
+    public void generateNether(World world, int x, int z, Random random) {
+        //for(int i = 0; i < 20; i++){
+        //    int randX = x + random.nextInt(16);
+        //    int randZ = z + random.nextInt(16);
+        //    int randY = random.nextInt(128);
+        //    ferrum_ore.generate(world, random, randX, randY, randZ);
+        //}
     }
 
-    private void generateEnd(World world, int x, int z, Random random) {
+    public void generateEnd(World world, int x, int z, Random random) {
 
     }
 

@@ -21,7 +21,7 @@ public class Achievements {
             // Coords
             2, 0,
             // Icon
-            new ItemStack(ItemList.dark_iron),
+            new ItemStack(ItemList.dark_ingot),
             // Dependency
             Achievements.mineCrystalOre).registerStat();
     public static Achievement buildCrystalPickaxe = (Achievement) new Achievement("buildCrystalPickaxe",

@@ -8,7 +8,7 @@ import cpw.mods.fml.common.gameevent.PlayerEvent;
 public class AchievementTriggerHandler {
     @SubscribeEvent
     public void smeltEvent(PlayerEvent.ItemSmeltedEvent e){
-        if(e.smelting.getItem().equals(ItemList.dark_iron)){
+        if(e.smelting.getItem().equals(ItemList.dark_ingot)){
             e.player.addStat(Achievements.smeltDarkIron, 1);
         }
     }

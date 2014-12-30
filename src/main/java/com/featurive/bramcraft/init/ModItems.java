@@ -17,7 +17,7 @@ public class ModItems
         ModRegistry.register(ItemList.crystal_gem, Names.Item.crystal_gem);
         ModRegistry.register(ItemList.crystal_pickaxe, Names.Item.crystal_pickaxe);
         ModRegistry.register(ItemList.dark_axe, Names.Item.dark_axe);
-        ModRegistry.register(ItemList.dark_iron, Names.Item.dark_iron);
+        ModRegistry.register(ItemList.dark_ingot, Names.Item.dark_iron);
         ModRegistry.register(ItemList.dark_pickaxe, Names.Item.dark_pickaxe);
         ModRegistry.register(ItemList.dark_shovel, Names.Item.dark_shovel);
         ModRegistry.register(ItemList.dark_sword, Names.Item.dark_sword);

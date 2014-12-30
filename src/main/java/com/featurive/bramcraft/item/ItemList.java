@@ -8,7 +8,7 @@ public class ItemList extends ModItem {
     public static ModItem crystal_gem =        (ModItem)    new ModItem().setUnlocalizedName(Names.Item.crystal_gem);
     public static ModPickaxe crystal_pickaxe = (ModPickaxe) new ModPickaxe(ToolMaterial.EMERALD).setUnlocalizedName(Names.Item.crystal_pickaxe);
     public static ModAxe dark_axe =            (ModAxe)     new ModAxe(ToolMaterial.EMERALD).setUnlocalizedName(Names.Item.dark_axe);
-    public static ModItem dark_iron =          (ModItem)    new ModItem().setUnlocalizedName(Names.Item.dark_iron);
+    public static ModItem dark_ingot =          (ModItem)    new ModItem().setUnlocalizedName(Names.Item.dark_iron);
     public static ModPickaxe dark_pickaxe =    (ModPickaxe) new ModPickaxe(ToolMaterial.EMERALD).setUnlocalizedName(Names.Item.dark_pickaxe);
     public static ModShovel dark_shovel =      (ModShovel)  new ModShovel(ToolMaterial.EMERALD).setUnlocalizedName(Names.Item.dark_shovel);
     public static ModSword dark_sword =        (ModSword)   new ModSword(ToolMaterial.EMERALD).setUnlocalizedName(Names.Item.dark_sword);
@@ -25,4 +25,5 @@ public class ItemList extends ModItem {
     public static ModItem poison_apple =       (ModItem)    new ModItem().setUnlocalizedName(Names.Item.poison_apple);
     public static ModItem swine_meat =         (ModItem)    new ModItem().setUnlocalizedName(Names.Item.swine_meat);
     public static ModItem thruster =           (ModItem)    new ModItem().setUnlocalizedName(Names.Item.thruster);
+    public static ModItem ferrum_ingot =       (ModItem)    new ModItem().setUnlocalizedName(Names.Item.ferrum_ingot);
 }

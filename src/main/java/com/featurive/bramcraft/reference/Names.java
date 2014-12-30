@@ -10,7 +10,7 @@ public class Names {
         public static String crystal_pickaxe = "crystal_pickaxe";
         public static String damage = "damage";
         public static String dark_axe = "dark_axe";
-        public static String dark_iron = "dark_iron";
+        public static String dark_iron = "dark_ingot";
         public static String dark_pickaxe = "dark_pickaxe";
         public static String dark_shovel = "dark_shovel";
         public static String dark_sword = "dark_sword";
@@ -31,6 +31,7 @@ public class Names {
         public static String swine_meat = "swine_meat";
         public static String thruster = "thruster";
         public static String transmutation = "transmutation";
+        public static String ferrum_ingot = "ferrum_ingot";
     }
 
     public static class Block {
