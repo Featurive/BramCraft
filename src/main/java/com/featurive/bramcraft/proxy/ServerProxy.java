@@ -1,8 +1,20 @@
 package com.featurive.bramcraft.proxy;
 
 public class ServerProxy extends CommonProxy{
+
     @Override
-    public void registerKeyBindings() {
-        // No Operations
+    public void preInit(){
+
     }
+
+    @Override
+    public void init(){
+
+    }
+
+    @Override
+    public void postInit(){
+
+    }
+
 }

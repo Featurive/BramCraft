@@ -13,10 +13,10 @@ item.bramcraft:crossbow.name=Crossbow
 item.bramcraft:crystal_gem.name=Crystal Gem
 item.bramcraft:crystal_pickaxe.name=Crystal Pickaxe
 item.bramcraft:dark_axe.name=Dark Axe
-item.bramcraft:dark_iron.name=Dark Iron Ingot
-item.bramcraft:dark_pickaxe.name=Dark Pickaxe
-item.bramcraft:dark_shovel.name=Dark Shovel
-item.bramcraft:dark_sword.name=Dark Sword
+item.bramcraft:dark_ingot.name=Dark Iron Ingot
+item.bramcraft:dark_pickaxe.name=Darkistic Miner
+item.bramcraft:dark_shovel.name=Darkium Digger
+item.bramcraft:dark_sword.name=Daromnium Slayer
 item.bramcraft:face.name=Face
 item.bramcraft:frame.name=Frame
 item.bramcraft:infused_diamond.name=Infused Diamond
@@ -46,3 +46,7 @@ achievement.openMobileEnderChest=From a distance..
 achievement.openMobileEnderChest.desc=Right Click a Mobile Enderchest.
 achievement.buildFace=Knowing
 achievement.buildFace.desc=Sorry, you still don't know me.
+
+# Controls
+key.bramcraft.explode=Explode
+keys.categories.bramcraft=BramCraft
