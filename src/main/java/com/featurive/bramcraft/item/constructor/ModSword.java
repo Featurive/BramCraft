@@ -1,15 +1,16 @@
-package com.featurive.bramcraft.item;
+package com.featurive.bramcraft.item.constructor;
 
 import com.featurive.bramcraft.creativetab.CreativeTab;
 import com.featurive.bramcraft.reference.References;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 
-public class ModBow extends ItemBow {
-    public ModBow() {
+public class ModSword extends ItemSword {
+    public ModSword(ToolMaterial material) {
+        super(material);
         this.setCreativeTab(CreativeTab.bc_tab);
     }
 
@@ -27,8 +28,7 @@ public class ModBow extends ItemBow {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister)
-    {
+    public void registerIcons(IIconRegister iconRegister){
         itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
 

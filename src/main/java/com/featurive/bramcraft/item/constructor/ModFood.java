@@ -1,4 +1,4 @@
-package com.featurive.bramcraft.item;
+package com.featurive.bramcraft.item.constructor;
 
 import com.featurive.bramcraft.reference.References;
 import cpw.mods.fml.relauncher.Side;

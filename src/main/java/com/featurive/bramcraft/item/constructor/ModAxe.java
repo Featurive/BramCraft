@@ -1,16 +1,16 @@
-package com.featurive.bramcraft.item;
+package com.featurive.bramcraft.item.constructor;
 
 import com.featurive.bramcraft.creativetab.CreativeTab;
 import com.featurive.bramcraft.reference.References;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 
-public class ModItem extends Item {
-    public ModItem(){
-        super();
+public class ModAxe extends ItemAxe {
+    public ModAxe(ToolMaterial material) {
+        super(material);
         this.setCreativeTab(CreativeTab.bc_tab);
     }
 
@@ -37,4 +37,5 @@ public class ModItem extends Item {
     {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
+
 }

@@ -1,15 +1,15 @@
-package com.featurive.bramcraft.item;
+package com.featurive.bramcraft.item.constructor;
 
 import com.featurive.bramcraft.creativetab.CreativeTab;
 import com.featurive.bramcraft.reference.References;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
-public class ModPickaxe extends ItemPickaxe {
-    public ModPickaxe(ToolMaterial material) {
+public class ModShovel extends ItemSpade {
+    public ModShovel(ToolMaterial material) {
         super(material);
         this.setCreativeTab(CreativeTab.bc_tab);
     }
