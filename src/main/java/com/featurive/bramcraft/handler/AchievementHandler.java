@@ -5,7 +5,7 @@ import com.featurive.bramcraft.reference.Achievements;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 
-public class AchievementTriggerHandler {
+public class AchievementHandler {
     @SubscribeEvent
     public void smeltEvent(PlayerEvent.ItemSmeltedEvent e){
         if(e.smelting.getItem().equals(ItemList.dark_ingot)){

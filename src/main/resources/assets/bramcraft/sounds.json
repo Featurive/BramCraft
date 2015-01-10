@@ -1,3 +1,6 @@
 {
-  "phaser": {"category": "ambient", "sounds": ["phaser"]}
+  "phaser": {
+    "category": "ambient",
+    "sounds": ["phaser"]
+  }
 }

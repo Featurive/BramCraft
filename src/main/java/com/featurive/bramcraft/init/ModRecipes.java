@@ -22,18 +22,14 @@ public class ModRecipes {
         GameRegistry.addRecipe(new ItemStack(ItemList.infused_iron, 8), "xxx", "xyx", "xxx", 'x', Blocks.redstone_block, 'y', Items.iron_ingot);
         GameRegistry.addRecipe(new ItemStack(ItemList.jetpack), "xyx", "ziz", "ele", 'x', Items.feather, 'y', Blocks.piston, 'z', ItemList.frame, 'i', BlockList.dark_block, 'e', new ItemStack(Blocks.anvil, 1, 0), 'l', Blocks.redstone_block);
         GameRegistry.addRecipe(new ItemStack(ItemList.mobile_enderchest), "xzx", "iui", "xzx", 'x', ItemList.infused_ender, 'i', Blocks.ender_chest, 'u', Items.ender_pearl, 'z', Blocks.wool);
-        //GameRegistry.addRecipe(new ItemStack(ItemList.mobilifier), "x", "y", "i", 'x', Blocks.wool, 'y', ItemList.infused_ender, 'i', Blocks.hopper);
-        //GameRegistry.addRecipe(new ItemStack(ItemList.shaker), "x x", "xbx", "iii", 'x', Blocks.cobblestone, 'b', Items.bucket, 'i', Blocks.stone);
         GameRegistry.addRecipe(new ItemStack(ItemList.thruster), "xxx", "uiu", "xxx", 'x', Blocks.stone_slab, 'u', Items.redstone, 'i', ItemList.dark_ingot);
-        //GameRegistry.addRecipe(new ItemStack(ItemList.transmutation), "xzx", "xyx", "xzx", 'x', Items.gold_ingot, 'z', Items.brewing_stand, 'y', Blocks.redstone_block);
-        //GameRegistry.addRecipe(new ItemStack(ItemList.key), "xyx", " y ", "zuz", 'x', Items.iron_ingot, 'y', ItemList.crystal_gem, 'u', Items.leather);
-        //GameRegistry.addShapelessRecipe(new ItemStack(ItemList.cheese), ItemList.shaker, Items.milk_bucket);
-        //GameRegistry.addShapelessRecipe(new ItemStack(ItemList.chocolatebar), ItemList.shaker, new ItemStack(Items.dye, 1, 3), Items.milk_bucket, Items.sugar);
         GameRegistry.addShapelessRecipe(new ItemStack(ItemList.infused_diamond, 2), Items.diamond, Blocks.redstone_block);
         GameRegistry.addShapelessRecipe(new ItemStack(ItemList.infused_ender), Items.ender_pearl, Items.redstone);
         GameRegistry.addShapelessRecipe(new ItemStack(ItemList.poison_apple), Items.apple, Items.spider_eye);
         GameRegistry.addShapedRecipe(new ItemStack(BlockList.ferrum_block), "xxx", "xxx", "xxx", 'x', ItemList.ferrum_ingot);
         GameRegistry.addShapelessRecipe(new ItemStack(ItemList.ferrum_ingot, 9), BlockList.ferrum_block);
+        GameRegistry.addRecipe(new ItemStack(ItemList.bag), "xxx", " y ", "zsz", 'x', Blocks.gold_block, 'y', BlockList.enderpearl_block, 's', Items.blaze_rod, 'z', Blocks.chest);
+        GameRegistry.addRecipe(new ItemStack(BlockList.enderpearl_block), "xxx", "xxx", "xxx", 'x', Items.ender_pearl);
 
         // Tools
         GameRegistry.addRecipe(new ItemStack(ItemList.crystal_pickaxe), "xxx", " y ", " y ", 'x', ItemList.crystal_gem, 'y', Items.stick);

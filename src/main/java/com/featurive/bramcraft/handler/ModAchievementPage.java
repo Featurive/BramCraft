@@ -12,7 +12,8 @@ public class ModAchievementPage {
                 Achievements.buildCrystalPickaxe,
                 Achievements.buildInfusedIron,
                 Achievements.openMobileEnderChest,
-                Achievements.buildFace);
+                Achievements.buildFace,
+                Achievements.openBag);
         AchievementPage.registerAchievementPage(pageBramCraft);
     }
 }

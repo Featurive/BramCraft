@@ -8,10 +8,8 @@ import com.featurive.bramcraft.utility.ModRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder(References.MOD_ID)
-public class ModItems
-{
-    public static void init()
-    {
+public class ModItems{
+        public static void init(){
         ModRegistry.register(ItemList.bacon, Names.Item.bacon);
         ModRegistry.register(ItemList.crossbow, Names.Item.crossbow);
         ModRegistry.register(ItemList.crystal_gem, Names.Item.crystal_gem);
@@ -28,11 +26,13 @@ public class ModItems
         ModRegistry.register(ItemList.infused_iron, Names.Item.infused_iron);
         ModRegistry.register(ItemList.jetpack, Names.Item.jetpack);
         ModRegistry.register(ItemList.mobile_enderchest, Names.Item.mobile_enderchest);
-        ModRegistry.register(ItemList.network_checker, Names.Item.network_checker);
         ModRegistry.register(ItemList.op_pickaxe, Names.Item.op_pickaxe);
         ModRegistry.register(ItemList.poison_apple, Names.Item.poison_apple);
         ModRegistry.register(ItemList.swine_meat, Names.Item.swine_meat);
         ModRegistry.register(ItemList.thruster, Names.Item.thruster);
+        ModRegistry.register(ItemList.bag, Names.Item.bag);
+        ModRegistry.register(ItemList.ferrum_ingot, Names.Item.ferrum_ingot);
+        ModRegistry.register(ItemList.workbench, Names.Item.workbench);
 
         LogHelper.info("Registered items");
     }

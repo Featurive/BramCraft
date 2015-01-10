@@ -9,8 +9,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @GameRegistry.ObjectHolder(References.MOD_ID)
-public class ModBlocks
-{
+public class ModBlocks{
     public static void init()
     {
         // registerBlock(blockname, unlocalizedname);
@@ -21,6 +20,7 @@ public class ModBlocks
         ModRegistry.register(BlockList.dutch_flag, Names.Block.dutch_flag);
         ModRegistry.register(BlockList.ferrum_block, Names.Block.ferrum_block);
         ModRegistry.register(BlockList.ferrum_ore, Names.Block.ferrum_ore);
+        ModRegistry.register(BlockList.enderpearl_block, Names.Block.enderpearl);
 
         LogHelper.info("Registered blocks");
     }

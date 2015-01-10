@@ -32,6 +32,8 @@ public class Names {
         public static String thruster = "thruster";
         public static String transmutation = "transmutation";
         public static String ferrum_ingot = "ferrum_ingot";
+        public static String bag = "bag";
+        public static String workbench = "workbench";
     }
 
     public static class Block {
@@ -39,28 +41,10 @@ public class Names {
         public static String dark_block = "dark_block";
         public static String dark_ore = "dark_ore";
         public static String dark_rock = "dark_rock";
-        public static String boom = "boom";
         public static String developer = "developer";
         public static String dutch_flag = "dutch_flag";
         public static String ferrum_block = "ferrum_block";
         public static String ferrum_ore = "ferrum_ore";
-    }
-
-    public static class ConfigEntry {
-        public static String OreDark = "OreDark";
-    }
-
-    public static class NBT {
-        public static String Owner = "owner";
-    }
-
-    public static class Keys {
-        public static String CATEGORY = "keys.bramcraft.category";
-        public static String FLY = "keys.bramcraft.fly";
-    }
-
-    public static class Network {
-        public static String checkConnection = "http://www.google.com/";
-        public static String openConnection = "http://www.google.com/";
+        public static String enderpearl = "enderpearl";
     }
 }

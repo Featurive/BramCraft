@@ -60,4 +60,13 @@ public class Achievements {
             new ItemStack(ItemList.face),
             // Dependency
             mineCrystalOre).registerStat();
+    public static Achievement openBag = (Achievement) new Achievement("openBag",
+            // Name
+            "openBag",
+            // Coords
+            -1, -4,
+            // Icon
+            new ItemStack(ItemList.bag),
+            // Dependency
+            null).initIndependentStat().registerStat();
 }
