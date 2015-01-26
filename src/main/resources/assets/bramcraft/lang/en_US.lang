@@ -9,7 +9,7 @@ tile.bramcraft:ferrum_ore.name=Ferrum Ore
 tile.bramcraft:enderpearl_block.name=Enderpearl Block
 
 # Tile Entities
-tile.bramcraft:mine.name=Mine
+tile.bramcraft:mine.name=Camouflage Mine
 
 # Items
 item.bramcraft:bacon.name=Bacon
