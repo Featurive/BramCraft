@@ -1,28 +1,29 @@
 package com.featurive.bramcraft.world;
 
 import com.featurive.bramcraft.block.BlockList;
-import cpw.mods.fml.common.IWorldGenerator;
-import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+import cpw.mods.fml.common.IWorldGenerator;
 
 import java.util.Random;
 
 public class WorldGenerator implements IWorldGenerator {
 
-    private WorldGenMinable dark_ore = new WorldGenMinable(BlockList.dark_ore, 12);
-    private WorldGenMinable crystal_ore = new WorldGenMinable(BlockList.crystal_ore, 8);
-    private WorldGenMinable ferrum_ore = new WorldGenMinable(BlockList.ferrum_ore, 12);
+    private WorldGenMinable dark_ore = new WorldGenMinable(BlockList.dark_ore.getDefaultState(), 12);
+    private WorldGenMinable crystal_ore = new WorldGenMinable(BlockList.crystal_ore.getDefaultState(), 8);
+    private WorldGenMinable ferrum_ore = new WorldGenMinable(BlockList.ferrum_ore.getDefaultState(), 12);
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
         int x = chunkX * 16;
         int z = chunkZ * 16;
 
-        switch (world.provider.dimensionId){
+        switch (world.provider.getDimensionId()){
             case 0:
                 generateSurface(world, x, z, random);
                 break;
@@ -42,13 +43,13 @@ public class WorldGenerator implements IWorldGenerator {
         if (random.nextInt(16) == 0) {
             int randX = x + random.nextInt(16);
             int randZ = z + random.nextInt(16);
-            int randY = world.getHeightValue(randX, randZ);
-
-            BiomeGenBase biome = world.getBiomeGenForCoords(randX, randZ);
+            int randY = world.getTopSolidOrLiquidBlock(new BlockPos(randX, 0, randZ)).getY();
+            BlockPos pos = new BlockPos(randX, randY, randZ);
+            BiomeGenBase biome = world.getBiomeGenForCoords(pos);
             if(biome != BiomeGenBase.river && biome != BiomeGenBase.ocean){
-                Block block = world.getBlock(randX, randY-1, randZ);
+                IBlockState block = world.getBlockState(pos);
                 if(block != Blocks.water && block != Blocks.lava){
-                    generateFlag(world, randX, randY, randZ);
+                    generateFlag(world, pos);
                 }
             }
         }
@@ -57,21 +58,24 @@ public class WorldGenerator implements IWorldGenerator {
             int randX = x + random.nextInt(16);
             int randZ = z + random.nextInt(16);
             int randY = 24 + random.nextInt(40);
-            dark_ore.generate(world, random, randX, randY, randZ);
+            BlockPos pos = new BlockPos(randX, randY, randZ);
+            dark_ore.generate(world, random, pos);
         }
 
         for(int i = 0; i < 4; i++){
             int randX = x + random.nextInt(16);
             int randZ = z + random.nextInt(16);
             int randY = random.nextInt(24);
-            crystal_ore.generate(world, random, randX, randY, randZ);
+            BlockPos pos = new BlockPos(randX, randY, randZ);
+            crystal_ore.generate(world, random, pos);
         }
 
         for(int i = 0; i < 5; i++){
             int randX = x + random.nextInt(16);
             int randZ = z + random.nextInt(16);
             int randY = 24 + random.nextInt(48);
-            ferrum_ore.generate(world, random, randX, randY, randZ);
+            BlockPos pos = new BlockPos(randX, randY, randZ);
+            ferrum_ore.generate(world, random, pos);
         }
     }
 
@@ -83,16 +87,16 @@ public class WorldGenerator implements IWorldGenerator {
 
     }
 
-    private void generateFlag(World world, int x, int y, int z){
+    private void generateFlag(World world, BlockPos pos){
         for (int i = 0; i < 10; i++) {
-            world.setBlock(x, y + i, z, Blocks.fence, 0, 2);
+            world.setBlockState(new BlockPos(pos.getX(), pos.getY()+i, pos.getZ()), Blocks.oak_fence.getDefaultState(), 2);
         }
 
         for (int cx = 0; cx < 4; cx++){
             for (int cy = 0; cy < 3; cy++){
                 for (int slab = 0; slab < 5; slab++){
-                    world.setBlock(x+1+cx, y + 7 + cy, z, BlockList.dutch_flag, 0, 2);
-                    world.setBlock(x+slab, y + 10, z, Blocks.wooden_slab, 0, 2);
+                    world.setBlockState(new BlockPos(pos.getX()+1+cx, pos.getY()+7+cy, pos.getZ()), BlockList.dutch_flag.getDefaultState(), 2);
+                    world.setBlockState(new BlockPos(pos.getX()+slab, pos.getY() + 10, pos.getZ()), Blocks.wooden_slab.getDefaultState(), 2);
                 }
             }
         }

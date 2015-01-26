@@ -14,13 +14,14 @@ import static net.minecraft.util.EnumChatFormatting.GRAY;
 import static net.minecraft.util.EnumChatFormatting.GREEN;
 
 public class ModContainer extends ModItem{
-    private String private_containerName;
-    private int private_rowCount;
-    private int private_type;
+    private String containerName;
+    private int rowCount;
+    private int type;
 
     public ModContainer(String containerName, int rowCount, int type){
-        private_containerName = containerName;
-        private_rowCount = rowCount;
+        this.containerName = containerName;
+        this.rowCount = rowCount;
+        this.type = type;
 
         this.setCreativeTab(CreativeTab.bc_tab);
         this.setMaxStackSize(maxStackSize);
@@ -28,11 +29,11 @@ public class ModContainer extends ModItem{
 
     @Override
     public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player) {
-        int posX = new Double(player.posX).intValue();
-        int posY = new Double(player.posY).intValue();
-        int posZ = new Double(player.posZ).intValue();
+        //int posX = new Double(player.posX).intValue();
+        //int posY = new Double(player.posY).intValue();
+        //int posZ = new Double(player.posZ).intValue();
 
-        switch(private_type) {
+        switch(type) {
             case 1:
                 openEnderchest(player);
                 break;
@@ -52,12 +53,11 @@ public class ModContainer extends ModItem{
     private void openEnderchest(EntityPlayer player){
         InventoryEnderChest enderchest = player.getInventoryEnderChest();
         player.displayGUIChest(enderchest);
-
         player.addStat(Achievements.openMobileEnderChest, 1);
     }
 
     private void openChest(EntityPlayer player){
-        InventoryBasic chest = new InventoryBasic(private_containerName, true, private_rowCount);
+        InventoryBasic chest = new InventoryBasic(containerName, true, rowCount);
         player.displayGUIChest(chest);
         player.addStat(Achievements.openBag, 1);
     }
@@ -68,7 +68,7 @@ public class ModContainer extends ModItem{
 
     public void addInformation(ItemStack itemstack, EntityPlayer player, List list, boolean flag) {
         String msg = "Right click to open your ";
-        list.add(GRAY + msg + GREEN + private_containerName + GRAY + "!");
+        list.add(GRAY + msg + GREEN + containerName + GRAY + "!");
     }
 }
 

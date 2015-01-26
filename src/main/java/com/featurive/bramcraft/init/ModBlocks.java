@@ -7,12 +7,9 @@ import com.featurive.bramcraft.utility.LogHelper;
 import com.featurive.bramcraft.utility.ModRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-
 @GameRegistry.ObjectHolder(References.MOD_ID)
 public class ModBlocks{
-    public static void init()
-    {
-        // registerBlock(blockname, unlocalizedname);
+    public static void init(){
         ModRegistry.register(BlockList.crystal_ore, Names.Block.crystal_ore);
         ModRegistry.register(BlockList.dark_block, Names.Block.dark_block);
         ModRegistry.register(BlockList.dark_ore, Names.Block.dark_ore);
@@ -21,8 +18,9 @@ public class ModBlocks{
         ModRegistry.register(BlockList.ferrum_block, Names.Block.ferrum_block);
         ModRegistry.register(BlockList.ferrum_ore, Names.Block.ferrum_ore);
         ModRegistry.register(BlockList.enderpearl_block, Names.Block.enderpearl_block);
+        ModRegistry.register(BlockList.test_container, Names.Block.test_container);
         ModRegistry.register(BlockList.mine, Names.Block.mine);
         // TODO: Fix tile entity Mine
         LogHelper.info("Registered blocks");
     }
-}
+}   
