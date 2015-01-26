@@ -20,8 +20,9 @@ public class ModBlocks{
         ModRegistry.register(BlockList.dutch_flag, Names.Block.dutch_flag);
         ModRegistry.register(BlockList.ferrum_block, Names.Block.ferrum_block);
         ModRegistry.register(BlockList.ferrum_ore, Names.Block.ferrum_ore);
-        ModRegistry.register(BlockList.enderpearl_block, Names.Block.enderpearl);
-
+        ModRegistry.register(BlockList.enderpearl_block, Names.Block.enderpearl_block);
+        ModRegistry.register(BlockList.mine, Names.Block.mine);
+        // TODO: Fix tile entity Mine
         LogHelper.info("Registered blocks");
     }
 }

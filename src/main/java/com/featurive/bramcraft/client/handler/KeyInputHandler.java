@@ -1,12 +1,14 @@
 package com.featurive.bramcraft.client.handler;
 
 import com.featurive.bramcraft.client.settings.KeyBindings;
+<<<<<<< Updated upstream
 import com.featurive.bramcraft.utility.LogHelper;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+=======
 
 public class KeyInputHandler {
     private KeyBindings getPressedKey(){
