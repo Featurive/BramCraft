@@ -4,7 +4,7 @@ import com.featurive.bramcraft.reference.References;
 import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
 
-public class LogHelper {
+public class Log {
     private static void log(Level logLevel, Object object){
         FMLLog.log(References.MOD_NAME, logLevel, String.valueOf(object));
     }

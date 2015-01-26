@@ -22,7 +22,7 @@ public class EventTrigger {
 
     @SubscribeEvent
     public void getCraftedItem(PlayerEvent.ItemCraftedEvent e){
-        if(e.player.worldObj.isRemote){
+        if(!e.player.worldObj.isRemote){
             e.player.addChatMessage(new ChatComponentText("CRAFTED : " + e.crafting.getDisplayName()));
         }
     }

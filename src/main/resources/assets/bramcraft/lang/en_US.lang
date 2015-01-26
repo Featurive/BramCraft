@@ -7,7 +7,9 @@ tile.bramcraft:dutch_flag.name=Dutch Flag
 tile.bramcraft:ferrum_block.name=Ferrum Block
 tile.bramcraft:ferrum_ore.name=Ferrum Ore
 tile.bramcraft:enderpearl_block.name=Enderpearl Block
-tile.bramcraft:test_container.name=Test Container
+
+# Tile Entities
+tile.bramcraft:mine.name=Mine
 
 # Items
 item.bramcraft:bacon.name=Bacon

@@ -40,6 +40,6 @@ public class Names {
     }
 
     public static class TileEntities {
-        public static String mine = "mine";
+        public static String mine = References.MOD_ID.toLowerCase() + ":" + "mine";
     }
 }

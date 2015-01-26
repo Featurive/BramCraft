@@ -4,6 +4,8 @@ import com.featurive.bramcraft.client.handler.KeyInputHandler;
 import com.featurive.bramcraft.client.settings.KeyBindings;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 
 public class ClientProxy extends CommonProxy{
 
@@ -27,6 +29,11 @@ public class ClientProxy extends CommonProxy{
     @Override
     public void postInit(){
 
+    }
+
+    @Override
+    public EntityPlayer getClientPlayer() {
+        return Minecraft.getMinecraft().thePlayer;
     }
 
 }

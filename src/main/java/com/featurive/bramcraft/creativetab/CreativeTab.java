@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class CreativeTab {
-    public final static CreativeTabs bc_tab = new CreativeTabs(References.MOD_ID.toLowerCase()) {
+    public final static CreativeTabs bramcraft = new CreativeTabs(References.MOD_ID.toLowerCase()) {
         public Item getTabIconItem() {
             return ItemList.face;
         }

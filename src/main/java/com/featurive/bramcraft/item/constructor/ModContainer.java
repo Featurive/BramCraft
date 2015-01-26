@@ -23,7 +23,7 @@ public class ModContainer extends ModItem{
         this.rowCount = rowCount;
         this.type = type;
 
-        this.setCreativeTab(CreativeTab.bc_tab);
+        this.setCreativeTab(CreativeTab.bramcraft);
         this.setMaxStackSize(maxStackSize);
     }
 

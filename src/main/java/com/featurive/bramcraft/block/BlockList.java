@@ -1,7 +1,6 @@
 package com.featurive.bramcraft.block;
 
 import com.featurive.bramcraft.block.blocks.ModBlock;
-import com.featurive.bramcraft.block.blocks.ModBlockContainer;
 import com.featurive.bramcraft.block.blocks.ModTileEntity;
 
 public final class BlockList extends ModBlock {
@@ -13,6 +12,5 @@ public final class BlockList extends ModBlock {
     public static ModBlock ferrum_block = new BlockFerrum();
     public static ModBlock ferrum_ore = new BlockFerrumOre();
     public static ModBlock enderpearl_block = new BlockEnderpearl();
-    public static ModBlockContainer test_container = new BlockTestContainer("Container", true, 54);
     public static ModTileEntity mine = new BlockMine();
 }

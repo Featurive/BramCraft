@@ -3,7 +3,7 @@ package com.featurive.bramcraft.init;
 import com.featurive.bramcraft.item.ItemList;
 import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.reference.References;
-import com.featurive.bramcraft.utility.LogHelper;
+import com.featurive.bramcraft.utility.Log;
 import com.featurive.bramcraft.utility.ModRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -33,6 +33,6 @@ public class ModItems{
         ModRegistry.register(ItemList.thruster, Names.Item.thruster);
         ModRegistry.register(ItemList.ferrum_ingot, Names.Item.ferrum_ingot);
 
-        LogHelper.info("Registered items");
+        Log.info("Registered items");
     }
 }

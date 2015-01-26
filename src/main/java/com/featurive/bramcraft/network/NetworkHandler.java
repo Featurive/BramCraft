@@ -9,7 +9,6 @@ import cpw.mods.fml.relauncher.Side;
 
 public class NetworkHandler {
     private static SimpleNetworkWrapper instance;
-
     public static void init(){
         instance = NetworkRegistry.INSTANCE.newSimpleChannel(References.MOD_ID);
 
