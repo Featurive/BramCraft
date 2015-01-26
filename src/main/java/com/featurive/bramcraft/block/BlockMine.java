@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 public class BlockMine extends ModTileEntity {
     public BlockMine() {
-        this.setUnlocalizedName(Names.Block.mine);
+        this.setBlockName(Names.Block.mine);
     }
 
     @Override

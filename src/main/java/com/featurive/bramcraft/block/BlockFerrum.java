@@ -5,6 +5,6 @@ import com.featurive.bramcraft.reference.Names;
 
 public class BlockFerrum extends ModBlock {
     public BlockFerrum(){
-        this.setUnlocalizedName(Names.Block.ferrum_block);
+        this.setBlockName(Names.Block.ferrum_block);
     }
 }

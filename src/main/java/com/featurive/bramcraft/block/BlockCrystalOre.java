@@ -5,6 +5,6 @@ import com.featurive.bramcraft.reference.Names;
 
 public class BlockCrystalOre extends ModBlock {
     public BlockCrystalOre(){
-        this.setUnlocalizedName(Names.Block.crystal_ore);
+        this.setBlockName(Names.Block.crystal_ore);
     }
 }

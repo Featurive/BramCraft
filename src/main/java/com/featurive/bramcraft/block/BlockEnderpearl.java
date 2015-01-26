@@ -5,6 +5,6 @@ import com.featurive.bramcraft.reference.Names;
 
 public class BlockEnderpearl extends ModBlock {
     public BlockEnderpearl(){
-        this.setUnlocalizedName(Names.Block.enderpearl_block);
+        this.setBlockName(Names.Block.enderpearl_block);
     }
 }
