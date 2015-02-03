@@ -26,12 +26,12 @@ public class ModItems{
         ModRegistry.register(ItemList.infused_iron, Names.Item.infused_iron);
         ModRegistry.register(ItemList.jetpack, Names.Item.jetpack);
         ModRegistry.register(ItemList.mobile_enderchest, Names.Item.mobile_enderchest);
-        ModRegistry.register(ItemList.bag, Names.Item.bag);
         ModRegistry.register(ItemList.op_pickaxe, Names.Item.op_pickaxe);
         ModRegistry.register(ItemList.poison_apple, Names.Item.poison_apple);
         ModRegistry.register(ItemList.swine_meat, Names.Item.swine_meat);
         ModRegistry.register(ItemList.thruster, Names.Item.thruster);
         ModRegistry.register(ItemList.ferrum_ingot, Names.Item.ferrum_ingot);
+        ModRegistry.register(ItemList.utility_wrench, Names.Item.utility_wrench);
 
         Log.info("Registered items");
     }

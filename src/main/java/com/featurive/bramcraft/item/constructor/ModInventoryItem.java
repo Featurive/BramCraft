@@ -13,23 +13,22 @@ import java.util.List;
 import static net.minecraft.util.EnumChatFormatting.GRAY;
 import static net.minecraft.util.EnumChatFormatting.GREEN;
 
-public class ModContainerItem extends ModItem{
-    private String private_containerName;
-    private int private_rowCount;
-    private int private_type;
+public class ModInventoryItem extends ModItem{
+    private String containername;
+    private int slots;
+    private int type;
 
-    public ModContainerItem(String containerName, int rowCount, int type){
-        private_containerName = containerName;
-        private_rowCount = rowCount;
+    public ModInventoryItem(String containername, int slots, int type){
+        this.containername = containername;
+        this.slots = slots;
+        this.type = type;
         this.setCreativeTab(CreativeTab.bramcraft);
         this.setMaxStackSize(maxStackSize);
     }
+
     @Override
     public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player) {
-        int posX = new Double(player.posX).intValue();
-        int posY = new Double(player.posY).intValue();
-        int posZ = new Double(player.posZ).intValue();
-        switch(private_type) {
+        switch(type) {
             case 1:
                 openEnderchest(player);
                 break;
@@ -51,7 +50,7 @@ public class ModContainerItem extends ModItem{
         player.addStat(Achievements.openMobileEnderChest, 1);
     }
     private void openChest(EntityPlayer player){
-        InventoryBasic chest = new InventoryBasic(private_containerName, true, private_rowCount);
+        InventoryBasic chest = new InventoryBasic(containername, true, slots);
         player.displayGUIChest(chest);
         //player.addStat(null, 1);
     }
@@ -59,6 +58,6 @@ public class ModContainerItem extends ModItem{
     }
     public void addInformation(ItemStack itemstack, EntityPlayer player, List list, boolean flag) {
         String msg = "Right click to open your ";
-        list.add(GRAY + msg + GREEN + private_containerName + GRAY + "!");
+        list.add(GRAY + msg + GREEN + containername + GRAY + "!");
     }
 }

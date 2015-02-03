@@ -28,7 +28,6 @@ public class ModRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ItemList.poison_apple), Items.apple, Items.spider_eye);
         GameRegistry.addShapedRecipe(new ItemStack(BlockList.ferrum_block), "xxx", "xxx", "xxx", 'x', ItemList.ferrum_ingot);
         GameRegistry.addShapelessRecipe(new ItemStack(ItemList.ferrum_ingot, 9), BlockList.ferrum_block);
-        GameRegistry.addRecipe(new ItemStack(ItemList.bag), "xxx", " y ", "zsz", 'x', Blocks.gold_block, 'y', BlockList.enderpearl_block, 's', Items.blaze_rod, 'z', Blocks.chest);
         GameRegistry.addRecipe(new ItemStack(BlockList.enderpearl_block), "xxx", "xxx", "xxx", 'x', Items.ender_pearl);
 
         // Tools

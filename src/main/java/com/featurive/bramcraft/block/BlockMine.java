@@ -1,7 +1,10 @@
 package com.featurive.bramcraft.block;
 
+import com.featurive.bramcraft.BramCraft;
+import com.featurive.bramcraft.GuiHandler;
 import com.featurive.bramcraft.block.blocks.BlockList;
 import com.featurive.bramcraft.block.blocks.ModTileEntity;
+import com.featurive.bramcraft.item.constructor.ItemList;
 import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.tileentity.TileEntityMine;
 import cpw.mods.fml.relauncher.Side;
@@ -41,18 +44,25 @@ public class BlockMine extends ModTileEntity {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-        if(!world.isRemote){
-            TileEntityMine te = (TileEntityMine) world.getTileEntity(x, y, z);
-            if(te.getCamouflage(side) != null){
-                ItemStack camoStack = te.getCamouflage(side);
-                te.setCamouflage(null, side);
-                EntityItem entityItem = new EntityItem(world, x, y+1, z, camoStack);
-                world.spawnEntityInWorld(entityItem);
-            }else{
-                ItemStack item = player.getCurrentEquippedItem();
-                if (item != null && item.getItem() instanceof ItemBlock && item.getItem() != Item.getItemFromBlock(BlockList.mine)){
-                    ItemStack camo = item.splitStack(1);
-                    te.setCamouflage(camo, side);
+
+        if(player.getCurrentEquippedItem().getItem() == ItemList.utility_wrench){
+            if(!world.isRemote) {
+                player.openGui(BramCraft.instance, GuiHandler.GuiIDs.MINE.ordinal(), world, x, y, z);
+            }
+        } else {
+            if(!world.isRemote){
+                TileEntityMine te = (TileEntityMine) world.getTileEntity(x, y, z);
+                if (te.getCamouflage(side) != null) {
+                    ItemStack camoStack = te.getCamouflage(side);
+                    te.setCamouflage(null, side);
+                    EntityItem entityItem = new EntityItem(world, x, y + 1, z, camoStack);
+                    world.spawnEntityInWorld(entityItem);
+                } else {
+                    ItemStack item = player.getCurrentEquippedItem();
+                    if (item != null && item.getItem() instanceof ItemBlock && item.getItem() != Item.getItemFromBlock(BlockList.mine)) {
+                        ItemStack camo = item.splitStack(1);
+                        te.setCamouflage(camo, side);
+                    }
                 }
             }
         }

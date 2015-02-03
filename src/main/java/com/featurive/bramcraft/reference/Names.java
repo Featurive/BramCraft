@@ -23,7 +23,7 @@ public class Names {
         public static String swine_meat = "swine_meat";
         public static String thruster = "thruster";
         public static String ferrum_ingot = "ferrum_ingot";
-        public static String bag = "bag";
+        public static String utility_wrench = "utility_wrench";
     }
 
     public static class Block {
