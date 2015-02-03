@@ -8,8 +8,8 @@ import net.minecraft.inventory.InventoryEnderChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-
 import java.util.List;
+
 import static net.minecraft.util.EnumChatFormatting.GRAY;
 import static net.minecraft.util.EnumChatFormatting.GREEN;
 

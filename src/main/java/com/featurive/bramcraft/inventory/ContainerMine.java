@@ -9,12 +9,12 @@ import net.minecraft.item.ItemStack;
 public class ContainerMine extends ModContainer {
     private TileEntityMine te;
     public ContainerMine(InventoryPlayer playerInventory, TileEntityMine te){
-            this.addSlotToContainer(new Slot(te, 0, 50, 50));
-            this.addSlotToContainer(new Slot(te, 1, 50, 14));
-            this.addSlotToContainer(new Slot(te, 2, 50, 32));
-            this.addSlotToContainer(new Slot(te, 3, 32, 32));
-            this.addSlotToContainer(new Slot(te, 4, 68, 32));
-            this.addSlotToContainer(new Slot(te, 5, 68, 68));
+        this.addSlotToContainer(new Slot(te, 0, 80, 53));
+        this.addSlotToContainer(new Slot(te, 1, 80, 17));
+        this.addSlotToContainer(new Slot(te, 2, 80, 35));
+        this.addSlotToContainer(new Slot(te, 3, 98, 53));
+        this.addSlotToContainer(new Slot(te, 4, 98, 35));
+        this.addSlotToContainer(new Slot(te, 5, 62, 35));
 
         this.addPlayerSlots(playerInventory, 8, 84);
         this.te = te;

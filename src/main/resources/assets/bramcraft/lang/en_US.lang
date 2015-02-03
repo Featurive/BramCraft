@@ -34,7 +34,7 @@ item.bramcraft:poison_apple.name=Poison Apple
 item.bramcraft:swine_meat.name=Swine Meat
 item.bramcraft:thruster.name=Thruster
 item.bramcraft:bag.name=Bag
-item.bramcraft:ferrum_ingot=Ferrum Ingot
+item.bramcraft:ferrum_ingot.name=Ferrum Ingot
 
 # Creative Tab
 itemGroup.bramcraft=BramCraft Mod

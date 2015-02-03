@@ -1,7 +1,6 @@
 package com.featurive.bramcraft.item.constructor;
 
 import com.featurive.bramcraft.item.*;
-import com.featurive.bramcraft.reference.Type;
 
 public class ItemList extends ModItem {
     public static ModFood bacon = new ItemBacon(7, true);
