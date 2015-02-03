@@ -1,7 +1,7 @@
 package com.featurive.bramcraft.init;
 
-import com.featurive.bramcraft.block.BlockList;
-import com.featurive.bramcraft.item.ItemList;
+import com.featurive.bramcraft.block.blocks.BlockList;
+import com.featurive.bramcraft.item.constructor.ItemList;
 import com.featurive.bramcraft.utility.Log;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;

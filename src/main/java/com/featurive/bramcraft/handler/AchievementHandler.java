@@ -1,6 +1,6 @@
 package com.featurive.bramcraft.handler;
 
-import com.featurive.bramcraft.item.ItemList;
+import com.featurive.bramcraft.item.constructor.ItemList;
 import com.featurive.bramcraft.reference.Achievements;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;

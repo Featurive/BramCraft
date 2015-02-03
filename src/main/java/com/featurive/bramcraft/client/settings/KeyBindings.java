@@ -4,8 +4,7 @@ import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
 
 public enum KeyBindings {
-    EXPLODE ("key.bramcraft.explode", Keyboard.KEY_R),
-    EXPLODE_BIG ("key.bramcraft.explodeBig", Keyboard.KEY_H);
+    EXPLODE ("key.bramcraft.explode", Keyboard.KEY_R);
 
     private final KeyBinding keybinding;
 

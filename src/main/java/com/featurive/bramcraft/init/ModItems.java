@@ -1,6 +1,6 @@
 package com.featurive.bramcraft.init;
 
-import com.featurive.bramcraft.item.ItemList;
+import com.featurive.bramcraft.item.constructor.ItemList;
 import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.reference.References;
 import com.featurive.bramcraft.utility.Log;

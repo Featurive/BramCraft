@@ -8,7 +8,10 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
+import java.util.List;
+
 public abstract class ModTileEntity extends BlockContainer {
+    List<String> list;
     public ModTileEntity(Material material){
         super(material);
         this.setCreativeTab(CreativeTab.bramcraft);

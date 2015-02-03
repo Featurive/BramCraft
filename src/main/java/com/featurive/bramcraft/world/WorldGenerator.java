@@ -1,6 +1,6 @@
 package com.featurive.bramcraft.world;
 
-import com.featurive.bramcraft.block.BlockList;
+import com.featurive.bramcraft.block.blocks.BlockList;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
@@ -77,11 +77,49 @@ public class WorldGenerator implements IWorldGenerator {
     }
 
     public void generateNether(World world, int x, int z, Random random) {
+        for(int i = 0; i < 5; i++) {
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = 24 + random.nextInt(40);
+            dark_ore.generate(world, random, randX, randY, randZ);
+        }
 
+        for(int i = 0; i < 4; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = random.nextInt(24);
+            crystal_ore.generate(world, random, randX, randY, randZ);
+        }
+
+        for(int i = 0; i < 5; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = 24 + random.nextInt(48);
+            ferrum_ore.generate(world, random, randX, randY, randZ);
+        }
     }
 
     public void generateEnd(World world, int x, int z, Random random) {
+        for(int i = 0; i < 5; i++) {
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = 24 + random.nextInt(40);
+            dark_ore.generate(world, random, randX, randY, randZ);
+        }
 
+        for(int i = 0; i < 4; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = random.nextInt(24);
+            crystal_ore.generate(world, random, randX, randY, randZ);
+        }
+
+        for(int i = 0; i < 5; i++){
+            int randX = x + random.nextInt(16);
+            int randZ = z + random.nextInt(16);
+            int randY = 24 + random.nextInt(48);
+            ferrum_ore.generate(world, random, randX, randY, randZ);
+        }
     }
 
     private void generateFlag(World world, int x, int y, int z){

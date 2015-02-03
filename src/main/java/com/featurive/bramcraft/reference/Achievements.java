@@ -1,12 +1,12 @@
 package com.featurive.bramcraft.reference;
 
-import com.featurive.bramcraft.block.BlockList;
-import com.featurive.bramcraft.item.ItemList;
+import com.featurive.bramcraft.block.blocks.BlockList;
+import com.featurive.bramcraft.item.constructor.ItemList;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 
 public class Achievements {
-    public static Achievement mineCrystalOre = (Achievement) new Achievement("mineCrystalOre",
+    public final static Achievement mineCrystalOre = (Achievement) new Achievement("mineCrystalOre",
             // Name
             "mineCrystalOre",
             // Coords
@@ -15,7 +15,7 @@ public class Achievements {
             new ItemStack(BlockList.crystal_ore),
             // Dependency
             null).initIndependentStat().registerStat();
-    public static Achievement smeltDarkIron = (Achievement) new Achievement("smeltDarkIron",
+    public final static Achievement smeltDarkIron = (Achievement) new Achievement("smeltDarkIron",
             // Name
             "smeltDarkIron",
             // Coords
@@ -24,7 +24,7 @@ public class Achievements {
             new ItemStack(ItemList.dark_ingot),
             // Dependency
             Achievements.mineCrystalOre).registerStat();
-    public static Achievement buildCrystalPickaxe = (Achievement) new Achievement("buildCrystalPickaxe",
+    public final static Achievement buildCrystalPickaxe = (Achievement) new Achievement("buildCrystalPickaxe",
             // Name
             "buildCrystalPickaxe",
             // Coords
@@ -33,7 +33,7 @@ public class Achievements {
             new ItemStack(ItemList.crystal_pickaxe),
             // Dependency
             mineCrystalOre).registerStat();
-    public static Achievement buildInfusedIron = (Achievement) new Achievement("buildInfusedIron",
+    public final static Achievement buildInfusedIron = (Achievement) new Achievement("buildInfusedIron",
             // Name
             "buildInfusedIron",
             // Coords
@@ -42,7 +42,7 @@ public class Achievements {
             new ItemStack(ItemList.infused_iron),
             // Dependency
             mineCrystalOre).registerStat();
-    public static Achievement openMobileEnderChest = (Achievement) new Achievement("openMobileEnderChest",
+    public final static Achievement openMobileEnderChest = (Achievement) new Achievement("openMobileEnderChest",
             // Name
             "openMobileEnderChest",
             // Coords
@@ -51,7 +51,7 @@ public class Achievements {
             new ItemStack(ItemList.mobile_enderchest),
             // Dependency
             null).initIndependentStat().registerStat();
-    public static Achievement buildFace = (Achievement) new Achievement("buildFace",
+    public final static Achievement buildFace = (Achievement) new Achievement("buildFace",
             // Name
             "buildFace",
             // Coords
@@ -60,13 +60,4 @@ public class Achievements {
             new ItemStack(ItemList.face),
             // Dependency
             mineCrystalOre).registerStat();
-    public static Achievement openBag = (Achievement) new Achievement("openBag",
-            // Name
-            "openBag",
-            // Coords
-            -1, -4,
-            // Icon
-            new ItemStack(ItemList.bag),
-            // Dependency
-            null).initIndependentStat().registerStat();
 }

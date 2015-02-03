@@ -17,8 +17,8 @@ public class KeyInputHandler {
         KeyBindings key = getPressedKey();
         if(key != null){
             switch(key){
-
                 default:
+                    break;
             }
         }
     }

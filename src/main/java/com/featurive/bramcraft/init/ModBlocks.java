@@ -1,6 +1,6 @@
 package com.featurive.bramcraft.init;
 
-import com.featurive.bramcraft.block.BlockList;
+import com.featurive.bramcraft.block.blocks.BlockList;
 import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.reference.References;
 import com.featurive.bramcraft.utility.Log;

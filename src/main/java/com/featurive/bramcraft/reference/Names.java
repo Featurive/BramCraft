@@ -35,7 +35,6 @@ public class Names {
         public static String ferrum_block = "ferrum_block";
         public static String ferrum_ore = "ferrum_ore";
         public static String enderpearl_block = "enderpearl_block";
-        public static String test_container = "test_container";
         public static String mine = "mine";
     }
 

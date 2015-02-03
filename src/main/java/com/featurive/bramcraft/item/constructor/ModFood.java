@@ -9,8 +9,8 @@ import net.minecraft.item.ItemStack;
 
 public class ModFood extends ItemFood
 {
-    public ModFood(int heal, boolean b){
-        super(heal, b);
+    public ModFood(int heal, boolean ismeat){
+        super(heal, ismeat);
         this.setMaxStackSize(1);
         this.isDamageable();
         this.setMaxDamage(32);

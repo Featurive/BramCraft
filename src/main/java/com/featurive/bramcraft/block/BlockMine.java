@@ -1,11 +1,15 @@
 package com.featurive.bramcraft.block;
 
+import com.featurive.bramcraft.block.blocks.BlockList;
+import com.featurive.bramcraft.block.blocks.ModTileEntity;
 import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.tileentity.TileEntityMine;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -13,13 +17,25 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockMine extends com.featurive.bramcraft.block.blocks.ModTileEntity {
+public class BlockMine extends ModTileEntity {
     public BlockMine() {
         this.setBlockName(Names.Block.mine);
+        this.isOpaqueCube();
     }
 
     @Override
-    public TileEntity createNewTileEntity(World world, int metadata) {
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass() {
+        return 0;
+    }
+
+    @Override
+    public boolean renderAsNormalBlock() {
+        return false;
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World world, int metadata){
         return new TileEntityMine();
     }
 
@@ -27,8 +43,20 @@ public class BlockMine extends com.featurive.bramcraft.block.blocks.ModTileEntit
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
         if(!world.isRemote){
             TileEntityMine te = (TileEntityMine) world.getTileEntity(x, y, z);
-            te.setCamouflage(player.getCurrentEquippedItem());
+            if(te.getCamouflage(side) != null){
+                ItemStack camoStack = te.getCamouflage(side);
+                te.setCamouflage(null, side);
+                EntityItem entityItem = new EntityItem(world, x, y+1, z, camoStack);
+                world.spawnEntityInWorld(entityItem);
+            }else{
+                ItemStack item = player.getCurrentEquippedItem();
+                if (item != null && item.getItem() instanceof ItemBlock && item.getItem() != Item.getItemFromBlock(BlockList.mine)){
+                    ItemStack camo = item.splitStack(1);
+                    te.setCamouflage(camo, side);
+                }
+            }
         }
+
         return true;
     }
 
@@ -36,7 +64,7 @@ public class BlockMine extends com.featurive.bramcraft.block.blocks.ModTileEntit
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side) {
         TileEntityMine te = (TileEntityMine) world.getTileEntity(x, y, z);
-        ItemStack stack = te.getCamouflage();
+        ItemStack stack = te.getCamouflage(side);
         if(stack != null && stack.getItem() instanceof ItemBlock){
             Block block = ((ItemBlock)stack.getItem()).field_150939_a;
             return block.getIcon(side, stack.getItemDamage());
@@ -44,4 +72,6 @@ public class BlockMine extends com.featurive.bramcraft.block.blocks.ModTileEntit
             return super.getIcon(world, x, y, z, side);
         }
     }
+
+
 }

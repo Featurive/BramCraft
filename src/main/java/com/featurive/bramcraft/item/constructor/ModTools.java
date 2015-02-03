@@ -1,6 +1,5 @@
 package com.featurive.bramcraft.item.constructor;
 
-import com.featurive.bramcraft.item.ItemList;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;

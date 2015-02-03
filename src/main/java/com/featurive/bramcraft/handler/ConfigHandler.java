@@ -7,28 +7,28 @@ import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
 
-public class ConfigurationHandler
+public class ConfigHandler
 {
-    public static Configuration configuration;
-    public static boolean testValue = false;
+    public static Configuration config;
+    public static boolean destroyBlocks = false;
 
     public static void init(File configFile)
     {
-        // Create the configuration object from the given configuration file
-        if (configuration == null)
+        // Create the config object from the given config file
+        if (config == null)
         {
-            configuration = new Configuration(configFile);
+            config = new Configuration(configFile);
             loadConfiguration();
         }
     }
 
     private static void loadConfiguration()
     {
-        testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value");
+        destroyBlocks = config.getBoolean("destroyBlocks", "tileentities.mine", false, "If set to true, the mine will destroy blocks.");
 
-        if (configuration.hasChanged())
+        if (config.hasChanged())
         {
-            configuration.save();
+            config.save();
         }
     }
 
