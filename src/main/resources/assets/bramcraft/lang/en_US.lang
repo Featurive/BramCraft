@@ -6,6 +6,10 @@ tile.bramcraft:dark_rock.name=Dark Rock
 tile.bramcraft:dutch_flag.name=Dutch Flag
 tile.bramcraft:ferrum_block.name=Ferrum Block
 tile.bramcraft:ferrum_ore.name=Ferrum Ore
+tile.bramcraft:enderpearl_block.name=Enderpearl Block
+
+# Tile Entities
+tile.bramcraft:mine.name=Camouflage Mine
 
 # Items
 item.bramcraft:bacon.name=Bacon
@@ -29,6 +33,8 @@ item.bramcraft:op_pickaxe.name=OP Pickaxe
 item.bramcraft:poison_apple.name=Poison Apple
 item.bramcraft:swine_meat.name=Swine Meat
 item.bramcraft:thruster.name=Thruster
+item.bramcraft:bag.name=Bag
+item.bramcraft:ferrum_ingot=Ferrum Ingot
 
 # Creative Tab
 itemGroup.bramcraft=BramCraft Mod
