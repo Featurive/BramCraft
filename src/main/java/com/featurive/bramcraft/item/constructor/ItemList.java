@@ -24,5 +24,4 @@ public class ItemList extends ModItem {
     public static ModItem thruster = new ItemThruster();
     public static ModItem ferrum_ingot = new ItemFerrumIngot();
     public static ModInventoryItem mobile_enderchest = new ItemMobileEnderchest();
-    public static ModItem utility_wrench = new ItemUtilityWrench();
 }

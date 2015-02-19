@@ -19,7 +19,7 @@ import net.minecraft.util.AxisAlignedBB;
 import java.util.List;
 
 public class TileEntityMine extends TileEntityBase implements ISidedInventory {
-    private int seconds = 5;
+    private int seconds = 10;
     private int timer = seconds * 20;
     public ItemStack[] textures = new ItemStack[6];
 
@@ -40,6 +40,18 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
                 }
             }
         }
+    }
+
+    public void setTimer(int value){
+        this.timer = value;
+    }
+
+    public int getTimer(){
+        return this.timer;
+    }
+
+    public int getTimerInSeconds(){
+        return this.timer / 20;
     }
 
     public void setCamouflage(ItemStack stack, int side){

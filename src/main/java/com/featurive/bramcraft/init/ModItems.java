@@ -31,7 +31,6 @@ public class ModItems{
         ModRegistry.register(ItemList.swine_meat, Names.Item.swine_meat);
         ModRegistry.register(ItemList.thruster, Names.Item.thruster);
         ModRegistry.register(ItemList.ferrum_ingot, Names.Item.ferrum_ingot);
-        ModRegistry.register(ItemList.utility_wrench, Names.Item.utility_wrench);
 
         Log.info("Registered items");
     }

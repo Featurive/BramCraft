@@ -56,3 +56,6 @@ achievement.buildFace.desc=Sorry, you still don't know me.
 # Controls
 key.bramcraft.explode=Explode
 keys.categories.bramcraft=BramCraft
+
+# GUI
+gui.bramcraft.mine.timer=Timer: %s ticks (&ss)
