@@ -29,6 +29,8 @@ public class ModRecipes {
         GameRegistry.addShapedRecipe(new ItemStack(BlockList.ferrum_block), "xxx", "xxx", "xxx", 'x', ItemList.ferrum_ingot);
         GameRegistry.addShapelessRecipe(new ItemStack(ItemList.ferrum_ingot, 9), BlockList.ferrum_block);
         GameRegistry.addRecipe(new ItemStack(BlockList.enderpearl_block), "xxx", "xxx", "xxx", 'x', Items.ender_pearl);
+        GameRegistry.addRecipe(new ItemStack(BlockList.condenser), "xyx", "jij", " u ", 'x', Blocks.obsidian, 'y', Blocks.diamond_block, 'j', BlockList.compression_chamber, 'i', Blocks.sticky_piston, 'u', Blocks.iron_block);
+        GameRegistry.addRecipe(new ItemStack(BlockList.compression_chamber), "xyx", "xzx", "xxx", 'x', Blocks.obsidian, 'y', Blocks.piston, 'z', Blocks.cauldron);
 
         // Tools
         GameRegistry.addRecipe(new ItemStack(ItemList.crystal_pickaxe), "xxx", " y ", " y ", 'x', ItemList.crystal_gem, 'y', Items.stick);

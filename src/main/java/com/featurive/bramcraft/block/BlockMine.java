@@ -1,7 +1,7 @@
 package com.featurive.bramcraft.block;
 
 import com.featurive.bramcraft.BramCraft;
-import com.featurive.bramcraft.GuiHandler;
+import com.featurive.bramcraft.gui.GuiHandler;
 import com.featurive.bramcraft.block.blocks.ModTileEntity;
 import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.tileentity.TileEntityMine;
@@ -102,16 +102,16 @@ public class BlockMine extends ModTileEntity {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side) {
-        TileEntityMine te = (TileEntityMine) world.getTileEntity(x, y, z);
-        ItemStack stack = te.getCamouflage(side);
-        if(stack != null && stack.getItem() instanceof ItemBlock){
-            Block block = ((ItemBlock)stack.getItem()).field_150939_a;
-            return block.getIcon(side, stack.getItemDamage());
-        }else{
-            return super.getIcon(world, x, y, z, side);
-        }
+        @SideOnly(Side.CLIENT)
+        public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side) {
+            TileEntityMine te = (TileEntityMine) world.getTileEntity(x, y, z);
+            ItemStack stack = te.getCamouflage(side);
+            if(stack != null && stack.getItem() instanceof ItemBlock){
+                Block block = ((ItemBlock)stack.getItem()).field_150939_a;
+                return block.getIcon(side, stack.getItemDamage());
+            }else{
+                return super.getIcon(world, x, y, z, side);
+            }
     }
 
 

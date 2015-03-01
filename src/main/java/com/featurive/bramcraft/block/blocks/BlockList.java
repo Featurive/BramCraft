@@ -12,4 +12,6 @@ public final class BlockList extends ModBlock {
     public static ModBlock ferrum_ore = new BlockFerrumOre();
     public static ModBlock enderpearl_block = new BlockEnderpearl();
     public static ModTileEntity mine = new BlockMine();
+    public static ModTileEntity condenser = new BlockCondenser();
+    public static ModTileEntity compression_chamber = new BlockCompressionChamber();
 }

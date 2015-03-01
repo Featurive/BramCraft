@@ -1,4 +1,4 @@
-package com.featurive.bramcraft;
+package com.featurive.bramcraft.gui;
 
 import com.featurive.bramcraft.gui.GuiMine;
 import com.featurive.bramcraft.inventory.ContainerMine;

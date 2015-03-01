@@ -10,6 +10,8 @@ tile.bramcraft:enderpearl_block.name=Enderpearl Block
 
 # Tile Entities
 tile.bramcraft:mine.name=Camouflage Mine
+tile.bramcraft:condenser.name=Condenser
+tile.bramcraft:compression_chamber.name=Compression Chamber
 
 # Items
 item.bramcraft:bacon.name=Bacon

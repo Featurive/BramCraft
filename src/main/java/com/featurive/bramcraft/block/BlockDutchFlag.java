@@ -14,6 +14,7 @@ public class BlockDutchFlag extends ModBlock {
 
     @Override
     public void updateTick(World world, int x, int y, int z, Random random) {
-        world.playSoundEffect(x, y, z, "mob.enderdragon.wings", 0.5f, random.nextFloat() + 0.5f);
+        //world.playSoundEffect(x, y, z, "mob.enderdragon.wings", 0.5f, random.nextFloat() + 0.5f);
+        world.playSoundEffect(x, y, z, "bramcraft:flag", 0.5f, random.nextFloat() + 0.5f);
     }
 }

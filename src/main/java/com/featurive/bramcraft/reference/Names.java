@@ -36,9 +36,13 @@ public class Names {
         public static String ferrum_ore = "ferrum_ore";
         public static String enderpearl_block = "enderpearl_block";
         public static String mine = "mine";
+        public static String condenser = "condenser";
+        public static String compression_chamber = "compression_chamber";
     }
 
     public static class TileEntities {
         public static String mine = References.MOD_ID.toLowerCase() + ":" + "mine";
+        public static String condenser = References.MOD_ID.toLowerCase() + ":" + "condenser";
+        public static String compression_chamber = References.MOD_ID.toLowerCase() + ":" + "compression_chamber";
     }
 }

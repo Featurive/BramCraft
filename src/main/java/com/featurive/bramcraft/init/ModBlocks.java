@@ -18,6 +18,8 @@ public class ModBlocks{
         GameRegistry.registerBlock(BlockList.ferrum_ore, Names.Block.ferrum_ore);
         GameRegistry.registerBlock(BlockList.enderpearl_block, Names.Block.enderpearl_block);
         GameRegistry.registerBlock(BlockList.mine, Names.Block.mine);
+        GameRegistry.registerBlock(BlockList.condenser, Names.Block.condenser);
+        GameRegistry.registerBlock(BlockList.compression_chamber, Names.Block.compression_chamber);
         Log.info("Registered blocks");
     }
 }   
