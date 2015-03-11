@@ -1,7 +1,8 @@
 package com.featurive.bramcraft.gui;
 
-import com.featurive.bramcraft.gui.GuiMine;
+import com.featurive.bramcraft.inventory.ContainerCondenser;
 import com.featurive.bramcraft.inventory.ContainerMine;
+import com.featurive.bramcraft.tileentity.TileEntityCondenser;
 import com.featurive.bramcraft.tileentity.TileEntityMine;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,7 +11,7 @@ import net.minecraft.world.World;
 public class GuiHandler implements IGuiHandler {
 
     public enum GuiIDs{
-        MINE
+        CONDENSER, MINE
     }
 
     @Override
@@ -18,6 +19,8 @@ public class GuiHandler implements IGuiHandler {
         switch(GuiIDs.values()[ID]){
             case MINE:
                 return new ContainerMine(player.inventory, (TileEntityMine) world.getTileEntity(x, y, z));
+            case CONDENSER:
+                return new ContainerCondenser(player.inventory, (TileEntityCondenser) world.getTileEntity(x, y, z));
         }
         throw new IllegalArgumentException("No GUI with ID " + ID);
     }
@@ -27,6 +30,8 @@ public class GuiHandler implements IGuiHandler {
         switch(GuiIDs.values()[ID]){
             case MINE:
                 return new GuiMine(player.inventory, (TileEntityMine) world.getTileEntity(x, y, z));
+            case CONDENSER:
+                return new GuiCondenser(player.inventory, (TileEntityCondenser) world.getTileEntity(x, y, z));
         }
         throw new IllegalArgumentException("No GUI with ID " + ID);
     }

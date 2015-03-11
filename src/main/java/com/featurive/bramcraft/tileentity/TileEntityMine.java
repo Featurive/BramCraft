@@ -21,7 +21,7 @@ import java.util.List;
 public class TileEntityMine extends TileEntityBase implements ISidedInventory {
     private int seconds = 10;
     private int timer = seconds * 20;
-    public ItemStack[] textures = new ItemStack[6];
+    public ItemStack[] camoStack = new ItemStack[6];
 
     public TileEntityMine() {
 
@@ -56,18 +56,18 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
 
     public void setCamouflage(ItemStack stack, int side){
         this.setInventorySlotContents(side, stack);
-        //textures[side] = stack;
+        //itemStack[side] = stack;
         //worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
     }
 
     public ItemStack getCamouflage(int side){
         return getStackInSlot(side);
-        //return textures[side];
+        //return itemStack[side];
     }
 
     @Override
     public void writeToPacket(ByteBuf buf){
-        for(ItemStack stack : textures){
+        for(ItemStack stack : camoStack){
             ByteBufUtils.writeItemStack(buf, stack);
         }
 
@@ -75,8 +75,8 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
 
     @Override
     public void readFromPacket(ByteBuf buf){
-        for(int i = 0; i < textures.length; i++) {
-            textures[i] = ByteBufUtils.readItemStack(buf);
+        for(int i = 0; i < camoStack.length; i++) {
+            camoStack[i] = ByteBufUtils.readItemStack(buf);
         }
         worldObj.markBlockRangeForRenderUpdate(xCoord, yCoord, zCoord, xCoord, yCoord, zCoord);
     }
@@ -86,15 +86,15 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
         super.readFromNBT(tag);
         timer = tag.getInteger("timer");
 
-        textures = new ItemStack[6];
+        camoStack = new ItemStack[6];
 
-        NBTTagList camoTagList = tag.getTagList("textures", 10);
+        NBTTagList camoTagList = tag.getTagList("itemStack", 10);
 
         for(int i = 0; i < camoTagList.tagCount(); i++){
             NBTTagCompound t = camoTagList.getCompoundTagAt(i);
             int index = t.getByte("index");
-            if(index >= 0 && index < textures.length){
-                textures[index] = ItemStack.loadItemStackFromNBT(t);
+            if(index >= 0 && index < camoStack.length){
+                camoStack[index] = ItemStack.loadItemStackFromNBT(t);
             }
         }
     }
@@ -106,8 +106,8 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
 
         NBTTagList camoTagList = new NBTTagList();
 
-        for(int i = 0; i < textures.length; i++){
-            ItemStack stack = textures[i];
+        for(int i = 0; i < camoStack.length; i++){
+            ItemStack stack = camoStack[i];
 
             if(stack != null){
                 NBTTagCompound t = new NBTTagCompound();
@@ -116,42 +116,41 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
                 camoTagList.appendTag(t);
             }
         }
-        tag.setTag("textures", camoTagList);
+        tag.setTag("itemStack", camoTagList);
     }
 
     @Override
     public int getSizeInventory()
     {
-        return textures.length;
+        return camoStack.length;
     }
 
     @Override
     public ItemStack getStackInSlot(int slot)
     {
-        return textures[slot];
+        return camoStack[slot];
     }
 
     @Override
-    public ItemStack decrStackSize(int slot, int decreaseAmount)
-    {
-        if (textures[slot] != null)
+    public ItemStack decrStackSize(int slot, int decreaseAmount){
+        if (camoStack[slot] != null)
         {
             ItemStack itemstack;
 
-            if (textures[slot].stackSize <= decreaseAmount)
+            if (camoStack[slot].stackSize <= decreaseAmount)
             {
-                itemstack = textures[slot];
+                itemstack = camoStack[slot];
                 setInventorySlotContents(slot, null);
                 markDirty();
                 return itemstack;
             }
             else
             {
-                itemstack = textures[slot].splitStack(decreaseAmount);
+                itemstack = camoStack[slot].splitStack(decreaseAmount);
 
-                if (textures[slot].stackSize == 0)
+                if (camoStack[slot].stackSize == 0)
                 {
-                    textures[slot] = null;
+                    camoStack[slot] = null;
                 }
 
                 markDirty();
@@ -165,12 +164,11 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
     }
 
     @Override
-    public ItemStack getStackInSlotOnClosing(int slot)
-    {
-        if (textures[slot] != null)
+    public ItemStack getStackInSlotOnClosing(int slot){
+        if (camoStack[slot] != null)
         {
-            ItemStack itemstack = textures[slot];
-            textures[slot] = null;
+            ItemStack itemstack = camoStack[slot];
+            camoStack[slot] = null;
             return itemstack;
         }
         else
@@ -180,9 +178,8 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
     }
 
     @Override
-    public void setInventorySlotContents(int slot, ItemStack stack)
-    {
-        textures[slot] = stack;
+    public void setInventorySlotContents(int slot, ItemStack stack){
+        camoStack[slot] = stack;
 
         if (stack != null && stack.stackSize > this.getInventoryStackLimit())
         {

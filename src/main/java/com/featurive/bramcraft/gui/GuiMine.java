@@ -16,7 +16,7 @@ public class GuiMine extends ModGui {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        super.drawGuiContainerForegroundLayer(mouseX, mouseY);                                       //0xAARRGGBB
+        super.drawGuiContainerForegroundLayer(mouseX, mouseY);                                                               //0xAARRGGBB
         this.fontRendererObj.drawString(I18n.format("gui.bramcraft.mine.timer", te.getTimer(), te.getTimerInSeconds()), 10, 5, 0xFF000000);
     }
 }

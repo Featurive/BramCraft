@@ -1,19 +1,45 @@
 package com.featurive.bramcraft.block;
 
+import com.featurive.bramcraft.BramCraft;
 import com.featurive.bramcraft.block.blocks.ModTileEntity;
+import com.featurive.bramcraft.gui.GuiHandler;
 import com.featurive.bramcraft.reference.Names;
 import com.featurive.bramcraft.tileentity.TileEntityCondenser;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class BlockCondenser extends ModTileEntity {
-    private IIcon top;
-    private IIcon side;
-    private IIcon front;
-
     public BlockCondenser() {
         this.setBlockName(Names.Block.condenser);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World world, int p_149915_2_) {
+        return new TileEntityCondenser();
+    }
+
+    @Override
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+        if(!world.isRemote){
+            player.openGui(BramCraft.instance, GuiHandler.GuiIDs.CONDENSER.ordinal(), world, x, y, z);
+        }
+        return true;
+    }
+
+    @Override
+    public int getRenderType() {
+        return -1;
+    }
+
+    @Override
+    public boolean isOpaqueCube() {
+        return false;
+    }
+
+    @Override
+    public boolean renderAsNormalBlock() {
+        return false;
     }
 
     //@Override
@@ -42,25 +68,4 @@ public class BlockCondenser extends ModTileEntity {
     //    this.side = iconRegister.registerIcon("bramcraft:condenser_side");
     //    this.front = iconRegister.registerIcon("bramcraft:condenser_front");
     //}
-
-    @Override
-    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-        return new TileEntityCondenser();
-    }
-
-    @Override
-    public int getRenderType() {
-        return -1;
-    }
-
-    @Override
-    public boolean isOpaqueCube() {
-        return false;
-    }
-
-    @Override
-    public boolean renderAsNormalBlock() {
-        return false;
-    }
-
 }

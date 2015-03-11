@@ -1,11 +1,9 @@
 package com.featurive.bramcraft.reference;
 
-import net.minecraft.block.Block;
-
 public class CondenserHelper {
     public enum Values{
         air(0),
-        stone(0),
+        stone(10),
         grass(0),
         dirt(0),
         cobblestone(100),
@@ -156,14 +154,14 @@ public class CondenserHelper {
         stained_glass(0),
         stained_glass_pane(0);
 
-        private final int value;
+        public final int value;
 
-        private Values(int condenserValue){
-            this.value = condenserValue;
+        Values(int value){
+            this.value = value;
         }
 
-        private int getValue(Block block){
-            return value;
+        public static int getValue(String string) {
+            return valueOf(string).value;
         }
     }
 }

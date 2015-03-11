@@ -97,4 +97,6 @@ public class ContainerMine extends ModContainer {
 
         return itemstack;
     }
+
+    // TODO: fix items not outputting
 }

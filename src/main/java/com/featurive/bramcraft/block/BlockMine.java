@@ -20,7 +20,6 @@ import net.minecraft.world.World;
 public class BlockMine extends ModTileEntity {
     public BlockMine() {
         this.setBlockName(Names.Block.mine);
-        this.isOpaqueCube();
     }
 
     @Override
@@ -79,9 +78,9 @@ public class BlockMine extends ModTileEntity {
 //
         //            if (te.getCamouflage(side) != null)
         //            {
-        //                ItemStack camoStack = te.getCamouflage(side);
+        //                ItemStack itemStack = te.getCamouflage(side);
         //                te.setCamouflage(null, side);
-        //                EntityItem entityItem = new EntityItem(world, x, y + 1, z, camoStack);
+        //                EntityItem entityItem = new EntityItem(world, x, y + 1, z, itemStack);
         //                world.spawnEntityInWorld(entityItem);
         //            }
         //            else

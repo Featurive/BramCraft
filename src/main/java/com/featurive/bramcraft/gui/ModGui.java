@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public abstract class ModGui extends GuiContainer {
     private final IInventory inventory;
-    private ResourceLocation guiTexture;
+    public static  ResourceLocation guiTexture;
 
     public ModGui(Container container, String guiTexture, IInventory inventory) {
         super(container);
@@ -25,8 +25,8 @@ public abstract class ModGui extends GuiContainer {
     }
 
     @Override
-    protected void drawGuiContainerBackgroundLayer(float partialtick, int mouseX, int mouseY) {
+    protected void drawGuiContainerBackgroundLayer(float partialTick, int mouseX, int mouseY){
         mc.getTextureManager().bindTexture(guiTexture);
-        this.drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+        drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
     }
 }
