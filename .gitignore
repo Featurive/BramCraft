@@ -1,0 +1,12 @@
+# Files
+build.gradle
+gradlew
+gradlew.bat
+
+# Directories
+run/
+build/
+gradle/
+.gradle/
+techne/
+build.bat
