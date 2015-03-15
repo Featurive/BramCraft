@@ -2,6 +2,9 @@
 build.gradle
 gradlew
 gradlew.bat
+BramCraft.iml
+BramCraft.ipr
+BramCraft.iws
 
 # Directories
 run/
@@ -10,3 +13,4 @@ gradle/
 .gradle/
 techne/
 build.bat
+
