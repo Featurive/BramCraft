@@ -60,4 +60,6 @@ key.bramcraft.explode=Explode
 keys.categories.bramcraft=BramCraft
 
 # GUI
-gui.bramcraft.mine.timer=Timer: %s ticks (&ss)
+gui.bramcraft.mine.timer=Timer: %st
+gui.bramcraft.mine.button.reset=Reset
+gui.bramcraft.mine.button.restart=Restart

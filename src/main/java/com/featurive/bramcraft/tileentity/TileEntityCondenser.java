@@ -1,7 +1,6 @@
 package com.featurive.bramcraft.tileentity;
 
 import com.featurive.bramcraft.block.blocks.BlockList;
-import com.featurive.bramcraft.reference.CondenserHelper;
 import cpw.mods.fml.common.network.ByteBufUtils;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +13,7 @@ public class TileEntityCondenser extends TileEntityBase implements IInventory {
     public ItemStack[] itemStack = new ItemStack[44];
 
     public TileEntityCondenser() {
-
+        //transferToOutput();
     }
 
     @Override
@@ -22,23 +21,31 @@ public class TileEntityCondenser extends TileEntityBase implements IInventory {
 
     }
 
-    public ItemStack getSelection(){
-        return getStackInSlot(1);
-    }
+    //public ItemStack getSelection(){
+    //    return getStackInSlot(1);
+    //}
 
-    public int getValueforSelection(){
-        return CondenserHelper.Values.getValue(getSelection().getUnlocalizedName());
-    }
+    //public int getValueforSelection(){
+    //    return CondenserHelper.Values.getValue(getSelection().getUnlocalizedName());
+    //}
 
-    public ItemStack getOutput(){
-        return getStackInSlot(0);
-    }
+    //public ItemStack getOutput(){
+    //    return getStackInSlot(0);
+    //}
 
-    public void setOutput(){
-        if(getOutput() != null){
-            this.setInventorySlotContents(0, new ItemStack(getSelection().getItem(), getOutput().stackSize + 1));
-        }
-    }
+    //public void setOutput(){
+    //    if(getOutput() != null){
+    //        this.setInventorySlotContents(0, new ItemStack(getSelection().getItem(), getOutput().stackSize + 1));
+    //    }
+    //}
+
+    //public void transferToOutput(){
+    //    ItemStack[] input = new ItemStack[42];
+    //    for(ItemStack itemstack : input){
+    //        CondenserHelper.Values.getValue(itemstack.getUnlocalizedName());
+    //        System.out.println(CondenserHelper.Values.getValue(itemstack.getUnlocalizedName()));
+    //    }
+    //}
 
     @Override
     public void writeToNBT(NBTTagCompound tag) {

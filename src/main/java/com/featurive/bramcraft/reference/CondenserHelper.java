@@ -161,7 +161,11 @@ public class CondenserHelper {
         }
 
         public static int getValue(String string) {
-            return valueOf(string).value;
+            if (valueOf(string) == null) {
+                return 0;
+            } else {
+                return valueOf(string).value;
+            }
         }
     }
 }
