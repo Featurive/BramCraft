@@ -59,7 +59,7 @@ achievement.buildFace.desc=Sorry, you still don't know me.
 key.bramcraft.explode=Explode
 keys.categories.bramcraft=BramCraft
 
-# GUI
+# Gui
 gui.bramcraft.mine.timer=Timer: %st
 gui.bramcraft.mine.button.reset=Reset
 gui.bramcraft.mine.button.restart=Restart

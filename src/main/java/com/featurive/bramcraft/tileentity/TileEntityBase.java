@@ -25,4 +25,6 @@ public class TileEntityBase extends TileEntity{
     public void readFromPacket(ByteBuf buf){
 
     }
+
+    public void onGuiButtonPress(int id){}
 }

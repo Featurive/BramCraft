@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public abstract class ModGui extends GuiContainer {
     private final IInventory inventory;
-    public static  ResourceLocation guiTexture;
+    public static ResourceLocation guiTexture;
 
     public ModGui(Container container, String guiTexture, IInventory inventory) {
         super(container);

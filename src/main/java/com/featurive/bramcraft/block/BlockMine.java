@@ -42,9 +42,9 @@ public class BlockMine extends ModTileEntity {
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
         if(!world.isRemote){
             ItemStack equippedItem = player.getCurrentEquippedItem();
-            if(player.isSneaking()){
+            //TODO: if(player.isSneaking()){
                 player.openGui(BramCraft.instance, GuiHandler.GuiIDs.MINE.ordinal(), world, x, y, z);
-            }
+            //}
         } else {
             TileEntityMine te = (TileEntityMine) world.getTileEntity(x, y, z);
             if (te.getCamouflage(side) != null){

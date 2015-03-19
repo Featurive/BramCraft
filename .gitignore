@@ -1,10 +1,11 @@
 # Files
+.gitignore
 build.gradle
 gradlew
 gradlew.bat
-BramCraft.iml
 BramCraft.ipr
 BramCraft.iws
+BramCraft.iml
 
 # Directories
 run/
@@ -13,4 +14,3 @@ gradle/
 .gradle/
 techne/
 build.bat
-

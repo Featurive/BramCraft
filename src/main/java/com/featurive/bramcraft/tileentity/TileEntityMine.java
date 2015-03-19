@@ -19,8 +19,7 @@ import net.minecraft.util.AxisAlignedBB;
 import java.util.List;
 
 public class TileEntityMine extends TileEntityBase implements ISidedInventory {
-    private int seconds = 10;
-    private int timer = seconds * 20;
+    private int timer = 200;
     public ItemStack[] camoStack = new ItemStack[6];
 
     public TileEntityMine() {
@@ -50,10 +49,6 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
         return this.timer;
     }
 
-    public int getTimerInSeconds(){
-        return this.timer / 20;
-    }
-
     public void setCamouflage(ItemStack stack, int side){
         this.setInventorySlotContents(side, stack);
         //itemStack[side] = stack;
@@ -63,6 +58,11 @@ public class TileEntityMine extends TileEntityBase implements ISidedInventory {
     public ItemStack getCamouflage(int side){
         return getStackInSlot(side);
         //return itemStack[side];
+    }
+
+    @Override
+    public void onGuiButtonPress(int id){
+        if(id == 0) timer = 200;
     }
 
     @Override
